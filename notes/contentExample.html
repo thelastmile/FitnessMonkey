@@ -1,0 +1,41 @@
+<script type="text/javascript" src="scripts/jquery.js"></script>
+
+<div id='content1' class='content-bar'>
+	<p id ='title1'>Title:</p>
+	<p id = 'description1'></p>
+	<img src = '' id = 'image1'/>
+</div>
+
+<span id="running" class='content-button'>Running Button</span>
+
+
+<script type='text/javascript'>
+
+	var contentData = [
+		{	name: "running",
+			image_path: "assests/running.jpg",
+			description: "Hey you should go running!"
+		},
+		{
+			name: 'yoga',
+			image_path: 'yoga.jpg',
+			description: "yoga!!!!"
+		}];
+
+	$('.content-button').click(function(e) {
+		var name = this.id;
+		var displayData = getData(name);
+		$('#title1').text(displayData.name);
+	});
+
+	function getData(name) {
+		var obj;
+
+		contentData.forEach(function(x) {
+			if(x.name == name) { 
+				obj = x;
+			};
+		});
+		return obj;
+	};
+</script>

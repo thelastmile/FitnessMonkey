@@ -1,0 +1,44 @@
+{"workouts" : [
+		{
+			"date": "1/1/2015",
+			"type": "run",
+			"duration": 30,
+			"intensity": 5
+		},
+		{
+			"date": "1/2/2015",
+			"type": "yoga",
+			"duration": 60,
+			"intensity": 3
+		},			
+		{
+			"date": "1/3/2015",
+			"type": "tennis",
+			"duration": 90,
+			"intensity": 9
+		},
+		{
+			"date": "1/5/2015",
+
+
+
+Overall Average Workout Intensity by Day
+X - every day in a given date range.
+Y - Avg intensity of all workouts on day X
+
+Total Workouts by Day (week)
+X - every day (week) in a given date range
+Y - sum of total workouts on day X
+
+
+Grouped Bar Chart
+Variety of Workouts by Week
+X - date of every monday in the date range.
+Y - count of workouts in a category
+
+Multiple Line Chart
+X - day or week
+Y - your total workouts
+Y2 - avg total workouts
+Y3 - leader's total workouts
+Y4 - personal goal

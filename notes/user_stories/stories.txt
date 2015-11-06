@@ -1,0 +1,12 @@
+User Stories:
+
+Ex. 
+
+As a (type of user), I want (some goal) so that (some reason).
+
+1.	As a 30-something male in recovery who enjoys staying active, I want a place where I can connect with other
+	like-minded people so that I don't have to feel like I'm alone in my recovery.
+
+2.	As a 40-something female who wants to support her family members in recovery, I would like to learn about resources 	and events that I can share with my family so that they can get involved in a program that help them stay clean.
+
+3.	As a young person whose addiction is leading them down the wrong path in life (jail, legal trouble, etc), I want a 		place that can help me figure out ways to battle my addiction and live a healthier and fit lifestyle so that I 			don't have to keep experiencing the negative consequences of m8y addiction.
