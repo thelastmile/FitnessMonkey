@@ -1,0 +1,225 @@
+{"workouts" : [
+		{
+			"date": "1/1/2015",
+			"type": "run",
+			"duration": 30,
+			"intensity": 5,
+			"category": "cardio"
+		},
+		{
+			"date": "1/2/2015",
+			"type": "yoga",
+			"duration": 60,
+			"intensity": 3,
+			"category": "strength"
+		},			
+		{
+			"date": "1/3/2015",
+			"type": "tennis",
+			"duration": 90,
+			"intensity": 9,
+			"category": "sports"
+		},
+		{
+			"date": "1/4/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/5/2015",
+			"type": "weight training",
+			"duration": 35,
+			"intensity": 8,
+			"category": "strength"			
+		},
+		{
+			"date": "1/6/2015",
+			"type": "soccer",
+			"duration": 45,
+			"intensity": 9,
+			"category": "sports"
+		},
+		{
+			"date": "1/7/2015",
+			"type": "weight training",
+			"duration": 35,
+			"intensity": 9,
+			"category": "strength"
+		},
+		{
+			"date": "1/8/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/9/2015",
+			"type": "weight training",
+			"duration": 55,
+			"intensity": 7,
+			"category": "strength"
+		},
+		{
+			"date": "1/10/2015",
+			"type": "run",
+			"duration": 50,
+			"intensity": 6,
+			"category": "cardio"
+		},
+		{
+			"date": "1/11/2015",
+			"type": "hiking",
+			"duration": 120,
+			"intensity": 8,
+			"category": "cardio"
+		},
+		{
+			"date": "1/12/2015",
+			"type": "tai-chi",
+			"duration": 75,
+			"intensity": 7,
+			"category": "strength"
+		},
+		{
+			"date": "1/13/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/14/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/15/2015",
+			"type": "handball",
+			"duration": 90,
+			"intensity": 9,
+			"category": "sports"
+		},
+		{
+			"date": "1/16/2015",
+			"type": "weight training",
+			"duration": 50,
+			"intensity": 8,
+			"category": "strength"
+		},
+		{
+			"date": "1/17/2015",
+			"type": "weight training",
+			"duration": 60,
+			"intensity": 9,
+			"category": "strength"
+		},
+		{
+			"date": "1/18/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/19/2015",
+			"type": "weight training",
+			"duration": 40,
+			"intensity": 9,
+			"category": "strength"
+		},
+		{
+			"date": "1/20/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/21/2015",
+			"type": "run",
+			"duration": 65,
+			"intensity": 7,
+			"category": "cardio"
+		},
+		{
+			"date": "1/22/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/23/2015",
+			"type": "tennis",
+			"duration": 67,
+			"intensity": 8,
+			"category": "sports"
+		},
+		{
+			"date": "1/24/2015",
+			"type": "tennis",
+			"duration": 75,
+			"intensity": 8,
+			"category": "sports"
+		},
+		{
+			"date": "1/25/2015",
+			"type": "dance",
+			"duration": 85,
+			"intensity": 8,
+			"category": "cardio"
+		},
+		{
+			"date": "1/26/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/27/2015",
+			"type": "yoga",
+			"duration": 90,
+			"intensity": 8,
+			"category": "strength"
+		},
+		{
+			"date": "1/28/2015",
+			"type": "weight training",
+			"duration": 40,
+			"intensity": 9,
+			"category": "strength"
+		},
+		{
+			"date": "1/29/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		},
+		{
+			"date": "1/30/2015",
+			"type": "weight training",
+			"duration": 55,
+			"intensity": 7,
+			"category": "strength"
+		},
+		{
+			"date": "1/31/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": 0,
+			"category": null
+		}
+	]
+}
+
+
+		
+
+
