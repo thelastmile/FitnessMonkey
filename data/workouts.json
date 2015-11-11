@@ -6,9 +6,8 @@
 			"difficulty": 4,
 			"intensity": 5,
 			"enjotment": 7,
-			"category": "cardio",
-			"score":,
-			"rating by age:"
+			"category": "cardio"
+			
 		},
 		{
 			"date": "1/2/2015",
@@ -17,9 +16,7 @@
 			"difficulty": 7,
 			"intensity": 3,
 			"enjotment": 8,
-			"category": "strength",
-			"score":,
-			"rating by age":
+			"category": "strength"
 		},			
 		{
 			"date": "1/3/2015",
@@ -28,9 +25,7 @@
 			"difficulty": 6,
 			"intensity": 9,
 			"enjotment": 9,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/4/2015",
@@ -39,9 +34,7 @@
 			"difficulty": null,
 			"intensity": null,
 			"enjotment": null,
-			"category": "cardio",
-			"score": ,
-			"rating by age": 
+			"category": "cardio" 
 		},
 		{
 			"date": "1/5/2015",
@@ -50,9 +43,8 @@
 			"difficulty": 7,
 			"intensity": 8,
 			"enjotment": 6,
-			"category": "strength",
-			"score":,
-			"rating by age":			
+			"category": "strength"
+			
 		},
 		{
 			"date": "1/6/2015",
@@ -61,9 +53,7 @@
 			"difficulty": 5,
 			"intensity": 9,
 			"enjotment": 9,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/7/2015",
@@ -72,9 +62,7 @@
 			"difficulty": 3,
 			"intensity": 6,
 			"enjotment": 8,
-			"category": "cardio",
-			"score":,
-			"rating by age":
+			"category": "cardio"
 		},
 		{
 			"date": "1/8/2015",
@@ -83,9 +71,7 @@
 			"difficulty": null,
 			"intensity": null,
 			"enjotment":null,
-			"category": "strength",
-			"score":,
-			"rating  by age":
+			"category": "strength"
 		},
 		{
 			"date": "1/9/2015",
@@ -94,9 +80,7 @@
 			"difficulty": 5,
 			"intensity": 7,
 			"enjotment": 9,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/10/2015",
@@ -105,9 +89,7 @@
 			"difficulty": 6,
 			"intensity": 8,
 			"enjotment": 9,
-			"category": "cardio",
-			"score":,
-			"rating by age":
+			"category": "cardio"
 		},
 		{
 			"date": "1/11/2015",
@@ -116,9 +98,7 @@
 			"difficulty":8,
 			"intensity": 8,
 			"enjotment": 9,
-			"category": "strength",
-			"score":,
-			"rating by age":
+			"category": "strength"
 		},
 		{
 			"date": "1/12/2015",
@@ -127,9 +107,7 @@
 			"difficulty": 6,
 			"intensity": 7,
 			"enjotment": 9,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/13/2015",
@@ -138,9 +116,7 @@
 			"difficulty":null,
 			"intensity": null,
 			"enjotment":null,
-			"category": "cardio",
-			"score":,
-			"rating by age":
+			"category": "cardio"
 		},
 		{
 			"date": "1/14/2015",
@@ -149,9 +125,7 @@
 			"difficulty": null,
 			"intensity": null,
 			"enjotment": null,
-			"category": "strength",
-			"score":,
-			"rating by age":
+			"category": "strength"
 		},
 		{
 			"date": "1/15/2015",
@@ -160,9 +134,7 @@
 			"difficulty": 7,
 			"intensity": 9,
 			"enjotment": 9, 
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/16/2015",
@@ -171,9 +143,7 @@
 			"difficulty": 7,
 			"intensity": 8,
 			"enjotment": 9,
-			"category": "cardio",
-			"score":,
-			"rating by age"
+			"category": "cardio"
 		},
 		{
 			"date": "1/17/2015",
@@ -182,9 +152,7 @@
 			"difficulty": 8,
 			"intensity": 9,
 			"enjotment": 7,
-			"category": "strength",
-			"score":,
-			"rating by age":
+			"category": "strength"
 		},
 		{
 			"date": "1/18/2015",
@@ -193,9 +161,7 @@
 			"difficulty": null,
 			"intensity": null,
 			"enjotment": null,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/19/2015",
@@ -204,9 +170,7 @@
 			"difficulty": 7,
 			"intensity": 9,
 			"enjotment": 8,
-			"category": "cardio",
-			"score":,
-			"rating by  age":
+			"category": "cardio"
 		},
 		{
 			"date": "1/20/2015",
@@ -215,9 +179,7 @@
 			"difficulty": null,
 			"intensity": null,
 			"enjotment": null,
-			"category": "strength",
-			"score":,
-			"rating by age":
+			"category": "strength"
 		},
 		{
 			"date": "1/21/2015",
@@ -226,9 +188,7 @@
 			"difficulty": 8,
 			"intensity": 7,
 			"enjotment": 9,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/22/2015",
@@ -237,9 +197,7 @@
 			"difficulty": null,
 			"intensity": null,
 			"enjotment": null,
-			"category": "cardio",
-			"score":,
-			"rating by age":
+			"category": "cardio"
 		},
 		{
 			"date": "1/23/2015",
@@ -248,9 +206,7 @@
 			"difficulty": 7,
 			"intensity": 8,
 			"enjotment": 9,
-			"category": "strength",
-			"score":,
-			"rating by age":
+			"category": "strength"
 		},
 		{
 			"date": "1/24/2015",
@@ -259,9 +215,7 @@
 			"difficulty": 6,
 			"intensity": 8,
 			"enjotment": 9,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
 		},
 		{
 			"date": "1/25/2015",
@@ -270,9 +224,8 @@
 			"intensity": 8,
 			"difficulty": 5,
 			"enjotment": 9,
-			"category": "cardio",
-			"score":,
-			"rating by age":
+			"category": "cardio"
+			
 		},
 		{
 			"date": "1/26/2015",
@@ -281,9 +234,8 @@
 			"intensity": null,
 			"difficulty": null,
 			"enjotment":null,
-			"category": "strength",
-			"score":,
-			"rating by age":
+			"category": "strength"
+			
 		},
 		{
 			"date": "1/27/2015",
@@ -292,9 +244,8 @@
 			"intensity": 8,
 			"difficulty": 7,
 			"enjotment": 9,
-			"category": "sports",
-			"score":,
-			"rating by age":
+			"category": "sports"
+			
 		},
 		{
 			"date": "1/28/2015",
@@ -303,41 +254,9 @@
 			"intensity": 9,
 			"difficulty": 5,
 			"enjotment": 9,
-			"category": "cardio",
-			"score":,
-			"rating by age"
-		},
-//(stop)
-
-
-
-
-
-
-		{
-			"date": "1/29/2015",
-			"type": null,
-			"duration": 0,
-			"intensity": 0,
-			"category": null
-		},
-		{
-			"date": "1/30/2015",
-			"type": "weight training",
-			"duration": 55,
-			"intensity": 7,
-			"category": "strength"
-		},
-		{
-			"date": "1/31/2015",
-			"type": null,
-			"duration": 0,
-			"intensity": 0,
-			"category": null
+			"category": "cardio"
 		}
-	]
-}
-
+]}
 
 		
 

@@ -3,6 +3,7 @@ $(function() {
 	var relapseData;
 
 	var loadDataRenderCharts = function(data){
+    console.log(data);
 		workoutData = data.workouts;
 		updateCharts();
 	};
