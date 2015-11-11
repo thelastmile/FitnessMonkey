@@ -1,0 +1,18 @@
+{"relapses": [
+	{
+		"date": "1/8/2015",
+		"substance": "alcohol",
+		"location": "club",
+		"associations": "Friends",
+		"emotions": "other",
+		"attitude": "positive"
+	},
+	{
+		"date": "1/28/2015",
+		"substance": "drugs",
+		"location": "home",
+		"associations": "alone",
+		"emotions": "hurt",
+		"attitude": "depressed"
+	}
+]}

@@ -2,35 +2,34 @@ body{
 	background-color: #286090;
 	color: floralwhite;
 }
-
 .page {
 	display: none;
 }
-
 #logo {
 	width: 3em;
 	height: auto;
 	margin-top: 5px;
 	margin-right: 5px;
 }
-
 .jumbotron {
-	width: 50em;
-	height: 400px;
+	width: 35em;
+	height: 392px;
 	margin: 0 auto;
 	background-color: black;
 	border: 1px solid dodgerblue;
 }
-
 .carousel-inner > .item > img {
 	width: 100%;
 	height: 300px;
 }
+
 #myCarousel{
 	width: 63%;
 	float:left;
 }
-
+.carousel-caption h2,h3{
+	color: red;
+}
 .col-md-4 {
 	height: 500px;
 }
@@ -43,162 +42,74 @@ body{
 	width: 4em;
 	height: auto;
 }
-
-#chat{
-	position: relative;
-	left: 17em;
-	top:-32em;
-	width: 27em;
-	height: 25em;
-}
-#healthy{
-	color:white;
-	margin-bottom: -3%;
-
-}
-#playbook{
-	color: black;
-}
-#playbook h2{
-	color: black;
-	text-shadow: 2px 2px 2px gray;
-}
-#playbook{
-	border-radius: 50px;
-}
-#playbook.row{
-	background-color: white;
-	padding: 1%;
-	width: 52em;
-	height: 29em;
-	position:relative;
-	bottom:-3em;
-	border-radius: 1em;
-	border: 2px solid black;
-}
-#playbook ul{
-	margin-left: 9em;
-}
-#playbook li{
-
-	border:1px solid black;
-	display: inline-block;
-	position: relative;
-	right:3em;
-}
-#pullquote{
-	color: red;
-	text-shadow:2px 2px 2px gray;
-}
-#jog{
-	margin-left: 9.4em;
-}
-#mind{
-	margin-left: 3.3em;
-}
-#train{
-	margin-left: 4em;
-}
-#train{
-	margin-left: 
-}
-#treatment{
-
-	margin-top: 16%;
-}
-
-
-#pic1{
-	border:  2px solid black;
-	border-radius: 60px;
-}
-#education p{
-	color:black;
-}
-#education h2{
-	color: black;
-	text-shadow: 2px 2px 2px gray;
-}
-#education{
-	padding: 1%;
-	border-radius: 2%;
-	border-radius: 1em;
-	border: 2px solid black;
-	position: relative;
-  bottom: -1em;
-  background-color: white;
-  width:52em;
-  height: 28em;
-}
-#education ul{
-	margin-left: 5em;
-}
-#education li{
-	border: 2px solid black;
-	display: inline-block;
-}
-#contacts{
-	color:white;
-	margin-top: 10%;
-}
 .list-unstyled{
 	
 	margin-left: 0%;
 }
-#join{
-		color:red;
+.col-md-12 h3{
+	color: white;
+	text-decoration: underline;
 }
-.comlinks{
-	  width: 3em;
+.col-md-12 h4{
+	color: black;
+}
 
+.col-md-12{
+	color: white;
+	text-align: justify;
 }
-#community {
+
+.col-md-12 a{
+	color:rgb(27,2,1);
+}
+.col-md-12 i{
+	font-size: 19px;
 	color:black;
 }
-#community h2{
-		text-shadow: 2px 2px 2px gray;
+.col-md-12 li{
+	list-style: none;
+	font-size: 19px;
 }
-#community{
-	padding: 1%;
-	border-radius: 1em;
-	border: 2px solid black;
-	background-color: white;
-	margin-top: 4em;
-	width:55em;
-	height: 46em;
+.col-md-12 p{
+	font-size: 19px;
 }
-#community li{
-	border: 2px solid black;
-	display: inline-block;
+#marquee{
+	color:yellow;
 
 }
-#community.row{
-	 position: relative;
-   bottom: 2em;
+#monkey3{
+	width: 3em;
+	height: 3em;
 }
-#addict{
-	color:red;
+.logos-row{
+	border-radius: 50px;
+	border: 1px solid black;
+	margin:1%;
+	width: 4em;
+	height: 4em;
+	transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
 }
-#stress{
-	margin-left: 8em;
-	
+.logos-row:hover{
+	transform: rotateY(180deg);
 }
-#help{
-margin-left: 4em;
+.logos-row .side{
+	backface-visibility: hidden;
+  height: 4em;
+  position: absolute;
+  width: 4em;
+}
+.logos-row .back{
+
+	transform: rotateY(180deg);
 
 }
-#reduce{
-	margin-left: 4em;
-	
-}
-
 
 table {
 	background-color: white;
 	text-align: center;
 	border-radius: .5em;
 }
-
 #log {
 	background-color: white;
 	border: 1px solid dodgerblue;

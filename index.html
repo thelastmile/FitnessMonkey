@@ -16,7 +16,7 @@
 </head>
 
 <body>
-	<div id="wrapper" class="container">
+	<div id="wrapper" class="container-fluid">
 		<!-- Navbar content -->
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -35,18 +35,14 @@
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			    <ul class="nav navbar-nav navbar-right">
-			    	<li><a href="#playbook">Playbook</a></li>
-			      	<li><a href="#education">Education</a></li>
-			      	<li><a href="#community">Community</a></li>
-			      	<li><a href="#events">Events</a></li>
-			      	<li><a href="#gear">Gear</a></li>
+			    	
 			    	<li><a href="#">Members: <span id="num">0</span></a></li>
 			    </ul>
 			  </div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 
-		<div class="col-md-8 hidden-xs">
+		<div class="col-md-8">
 			<div class="jumbotron">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					
@@ -62,6 +58,15 @@
 					      	<img src="assets/handcuffs.png" alt="...">
 					    </div>
 					    <div class="item">
+					      	<img src="assets/bar-chart.png" alt="...">
+					    </div>
+					    <div class="item">
+					      	<img src="assets/donut-chart.png" alt="...">
+					    </div>
+					    <div class="item">
+					      	<img src="assets/line-chart.png" alt="...">
+					    </div>
+					    <div class="item">
 					      	<img src="assets/bottle.png" alt="...">
 					    </div>
 					    <div class="item">
@@ -73,91 +78,53 @@
 					    <div class="item">
 					      	<img src="assets/marathon.png" alt="...">
 					    </div>
+					     <div class="item">
+					      	<img src="assets/runners.jpg" alt="...">
+					      	<div class="carousel-caption">
+        						<h2>Life is about running!</h2><h3>grab your shoes</h3>
+      						</div>
+					    </div>
+					    <div class="item">
+					      	<img src="assets/x-ray-runner.jpg" alt="...">
+					      	<div class="carousel-caption">
+        						<h2>Healthy People Live Longer and Exercise!</h2>
+      						</div>
+					    </div>
+					    <div class="item">
+					      	<img src="assets/Womens-Health-Month.jpg" alt="...">
+					    </div>
+					     <div class="item">
+					      	<img src="assets/woman_exercise.jpg" alt="...">
+					      	<div class="carousel-caption">
+        						<h2>Have fun, stay fit with our tips!</h2>
+      						</div>
+					    </div>
 					</div>
-
+				</div>
+				<marquee id="marquee">Join The Fitness Revolution!!!</marquee>	
+			</div>
+				<div class="row">
+					<div class="col-md-12">
+							<h3><b>Fitness Monkey</b></h3>
+							<img id="monkey3"src="assets/monkey.png">
+							 <i>A health and physical fitness tracker.</i> 
+							 <h4> To keep the Monkey of addiction off  your back through physical fitness!</h4><br>
+							 
+							<ul>
+							<li><img class="logos-row"src="assets/runners.jpg"><em>Log on and track your workouts</li>
+							 <li><img class="logos-row"src="assets/x-ray-runner.jpg">View real time data of your results</li>
+							 <li><img class="logos-row"src="assets/x-ray-runner.jpg">Hear from personal <a href="#">trainers </a></li>
+							 <li><img class="logos-row"src="assets/marathon.png">Compete with other fitness <a href="#">Monkeys.</a></li> 
+							 <li><img class="logos-row"src="assets/nike.png"><b>Nike, Under Armor, Adidas</b> and more.</li>
+							 <li><img class="logos-row"src="assets/woman_exercise.jpg">Learn  new <a href="#">excerises</a> and meet other fitness Monkeys.</li>
+							 <br>
+							 <p>Fitness Monkey provides an avenue to stay healthy and fit while on vacation, at home or work. Daily workouts are provided with, visual data of personal workouts, updates, resources for treatment, and health tips.</em></p>
+							</ul>
 				</div>	
 			</div>
-			<div class="row">
-				<hr>
-				<h1 class="text-center"><i>Get the Monkey Off of Your Back</i></h1>
-				<hr>
-			</div>
 
-			<!-- Data Visualization div -->
-			<div id="dataViz">
-				<p>This is a working demo of the data viz</p>
-				<p>Eventually, it will be placed on the app side</p>
-			</div>
-
-			<h3 id="healthy">Healthy Exercises...</h3>
-
-			<div id="playbook" class="row">
-				<h2>Playbooks - <small>Fitness Monkey Workouts!</small></h2>
-				<ul class="list-unstyled">
-					<li><img  src="assets/runners.jpg" width="180px" height="150"></li>
-					<li><img src="assets/runners.jpg" width="180px" height="150"></li>
-					<li><img src="assets/runners.jpg"width="180px" height="150"></li>
-				</ul>
-			</div>
-
-			<h3 id="treatment">The Role of Exercise in Addiction Recovery...</h3>
-
-			<div id="education" class="row">
-				<div id="front"class="glyphicon glyphicon-chevron-right"></div>
-				<div id="back"class="glyphicon glyphicon-chevron-left"></div>
-
-				<h2>Drugs and Alcohol - <small>videos, classes, help/support</small></h2>
-				<h4 id="addict">Recovery is about re-engaging with life, having fun and learning to live in sobriety.</h4>
-					<a href="#" id="stress">Reduce Stress!</a>
-					<a href="#"id="help">Helps combat depression!</a>
-					<a  href="#"id="reduce">Reduce Stress!</a>
-				
-				<ul class="list-unstyled">
-					<li><img id="pic1" src="assets/runners.jpg" width="180px" height="150"></li>
-					<li><img id="pic2" src="assets/x-ray-runner.jpg" width="180px" height="150"></li>
-					<li><img id="pic3" src="assets/Womens-Health-Month.jpg" width="180px" height="150"></li>
-				</ul>
-				<span id="info"></span>
-			</div>	
-
-			<h3 id="contacts">Healthy Relationships, Stay in Touch...</h3>
-
-			<div id="community" class="row">
-				<h2>Fitness Monkey Community - <small>personal trainers, athletic ambassadors, and fellow fitness junkies, events</small></h2>
-
-				<h4 id="join">Join Our Health Club to stay engaged with the latest fitness news!</h4>
-				
-				<div class="container">
-					<div class="row">
-						<ul class="list-unstyled">
-								<li><img src="assets/Womens-Health-Month.jpg" width="180px" height="150"></li>
-								<li><img src="assets/Womens-Health-Month.jpg" width="180px" height="150"></li>
-								<li><img src="assets/Womens-Health-Month.jpg" width="180px" height="150"></li>
-								<li><img src="assets/Womens-Health-Month.jpg" width="180px" height="150"></li>
-							</ul>
-					</div>
-				</div>
-
-				<div class="container">
-					<div class="row">
-						<ul class="list-unstyled">
-							<li><img src="assets/x-ray-runner.jpg" width="180px" height="150"></li>
-							<li><img src="assets/x-ray-runner.jpg" width="180px" height="150"></li>
-							<li><img src="assets/x-ray-runner.jpg" width="180px" height="150"></li>
-							<li><img src="assets/x-ray-runner.jpg" width="180px" height="150"></li>
-						</ul>
-					</div>
-					
-					<h2>View the workouts friends are using to stay fit!</h2>
-					<div class="comlinks">
-						<a href="#">Events</a>
-						<a href="#">Trainers</a>
-						<a href="#">Fitness Junkies</a>
-						<a href="#">Gear</a>
-					</div>
-				</div>
-			</div>			
-		</div>
+		</div>			
+	
 
 		<div id="userColumn" class="col-md-4">
 			<!-- navbar icons (hidden on login page)-->

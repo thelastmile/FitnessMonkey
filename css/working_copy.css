@@ -1,0 +1,57 @@
+body{
+	background-color: #286090;
+	color: floralwhite;
+}
+
+#logo {
+	width: 3em;
+	height: auto;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+
+svg {
+	background-color: floralwhite;
+	border: 1px solid dodgerblue;
+	margin: 0 auto;
+}
+
+.col {
+	border: 1px solid gray;
+}
+
+#clean-time, #last-workout, #total-workouts{
+	padding: .5em;
+	width: 2.5em;
+	text-align: center;
+	display: inline-block;
+	background-color: white;
+	color: dodgerblue;
+	border-radius: 3px;
+}
+
+#fitness-challenge{
+	padding: 1em;
+	margin-bottom: 3em;
+}
+
+
+/* Log workout styles
+------------------------*/
+
+#add-workout {
+	display: none;
+}
+
+#log-relapse {
+	display: none;
+}
+
+.ads {
+	text-align: center;
+}
+
+.ads img{
+	margin: 1em;
+}
