@@ -1,6 +1,7 @@
 body{
-	background-color: #286090;
-	color: floralwhite;
+	background-color: black;
+	color: dodgerblue;
+	font-family: sawasdee;
 }
 
 #logo {
@@ -21,21 +22,14 @@ svg {
 	border: 1px solid gray;
 }
 
-#clean-time, #last-workout, #total-workouts{
-	padding: .5em;
-	width: 2.5em;
-	text-align: center;
-	display: inline-block;
-	background-color: white;
-	color: dodgerblue;
-	border-radius: 3px;
-}
-
 #fitness-challenge{
 	padding: 1em;
 	margin-bottom: 3em;
 }
 
+#navbar-btn li:first-child {
+	margin-right: 1em;
+}
 
 /* Log workout styles
 ------------------------*/
@@ -54,4 +48,69 @@ svg {
 
 .ads img{
 	margin: 1em;
+}
+
+/* DASHBOARD STYLES
+-------------------------------------*/
+
+svg {
+	background-color: #222;
+}
+
+text {
+	stroke-width: 1;
+	stroke: limegreen;
+}
+
+
+#workout-donut-chart svg {
+	height: 319px;
+}
+
+#workout-line-chart button {
+	border-radius: 50%;
+	margin: .5em;
+	outline: none;
+	color: darkslateblue;
+}
+
+#workout-line-chart line {
+	stroke: none;
+}
+
+#workout-bar-chart line {
+	stroke: none;
+}
+
+.stats li {
+	background-color: #222;
+	padding: .5em;
+}
+
+.stats p {
+	font-size: 1.2em;
+}
+
+.stats li > p:last-child {
+	font-size: 4em;
+	text-align: center;
+	padding: .5em;
+	color: limegreen;
+	border-radius: 1em;
+}
+
+#outer {
+	width: 200px;
+	height: 200px;
+	background-color: darkslateblue;
+	border: 5px solid dodgerblue;
+	border-radius: 100px;
+	margin: 0 auto;
+}
+
+
+#outer p {
+	font-size: 5em;
+	color: limegreen;
+	margin: 50px auto;
 }

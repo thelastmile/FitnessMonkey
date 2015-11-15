@@ -3,30 +3,21 @@ $(function() {
 	var relapseData;
 
 	var loadDataRenderCharts = function(data){
-    console.log(data);
 		workoutData = data.workouts;
+		relapseData = data.relapses;
 		updateCharts();
 	};
-
-	function loadData(data){
-		var relapseData = data.relapses;
-		updateCleanTime(relapseData);
-	};
-
-	function updateCleanTime(data){
-		$('#clean-time').text(updateDaysClean(data));
-	}
 
 	function updateCharts(){
 		$('#total-workouts').text(workoutData.length);
 		$('#last-workout').text(updateLastWorkout(workoutData));
-		buildDonutChart(dataTransformer.typeDonutChart(workoutData), "Go", "#workout-donut-chart svg");
+		$('#clean-time').text(updateDaysClean(relapseData));
+		buildDonutChart(dataTransformer.typeDonutChart(workoutData), "FitMo", "#workout-donut-chart svg");
 		buildBarChart(dataTransformer.typeBarChart(workoutData), "Workouts by Type", "#workout-bar-chart svg");
 		buildLineChart(dataTransformer.typeLineChart(workoutData), "Workouts by Type", "#workout-line-chart svg");		
 	};
 
-	d3.json('../data/workouts.json', loadDataRenderCharts);
-	d3.json('../data/relapses.json', loadData);
+	d3.json('../data/new_workouts.json', loadDataRenderCharts);
 
 	function buildDonutChart(data, title, selector){
 
@@ -54,7 +45,8 @@ $(function() {
 	            .transition().duration(1200)
 	            .call(chart1);
 
-	        //nv.utils.windowResize(chart1.update);
+	        nv.utils.windowResize(chart1.update);
+	        d3.selectAll('text').style('font-family', 'sawasdee');
 
 	        return chart1;
 
@@ -74,7 +66,7 @@ $(function() {
         		.x(function(d) { return d.label })
         		.y(function(d) { return d.value })
         		.staggerLabels(true)
-        		//.staggerLabels(historicalBarChart[0].values.length > 8)
+        		// .staggerLabels(historicalBarChart[0].values.length > 8)
         		.showValues(true)
         		.duration(250);
       
@@ -83,7 +75,7 @@ $(function() {
         		.call(chart);
 
     		nv.utils.windowResize(chart.update);
-
+    		d3.selectAll('text').style('font-family', 'sawasdee');
     		return chart;
 		});
 	};
@@ -97,9 +89,15 @@ $(function() {
 	        var zoom = 1;
 
 	        chart.useInteractiveGuideline(true);
-	        chart.xAxis
-	            .tickFormat(d3.format(',r'));
 
+	        chart.xAxis
+	        	.axisLabel("Dates")
+                .tickFormat(function(d) {
+                    // I didn't feel like changing all the above date values
+                    // so I hack it to make each value fall on a different date
+                    return d3.time.format('%x')(new Date(d));
+                });
+	      
 	        chart.lines.dispatch.on("elementClick", function(evt) {
 	            console.log(evt);
 	        });
@@ -167,7 +165,7 @@ $(function() {
 	                svg.attr("height", Math.round(targetWidth / aspect));
 	            }
 	        }
-
+	        d3.selectAll('text').style({'font-family': 'sawasdee', 'fill': 'limegreen'});
     		return chart;
 		});
 	};
@@ -198,24 +196,28 @@ $(function() {
 			var results = [];
 
 			data.forEach(function(obj){
-				if(obj.type == null){
+				if(obj.category == null){
 					return;
-				} else if(typeObj[obj.type]){
-					typeObj[obj.type]++;
-				} else typeObj[obj.type] = 1;
+				} else if(typeObj[obj.category]){
+					typeObj[obj.category]++;
+				} else typeObj[obj.category] = 1;
 			})
 
 			for(var key in typeObj){
 				results.push({'label': key, 'value': typeObj[key]});
 			}
-
+			console.log(results)
 			return results;
 		},
 		typeLineChart: function(data){
 			var objStorage = [];
+
+			var dateNum; 
 			data.forEach(function(item, idx){
-				objStorage.push({x: idx, y: item.duration})
+				dateNum = new Date(item.date);
+				objStorage.push({x: dateNum, y: item.duration})
 			});
+
 			var results = [
 					{
 						values: objStorage,
@@ -271,7 +273,8 @@ $(function() {
 		var emotion = $('input[name="emotion-type"]:checked').val();
 		var attitude = $('input[name="attitude-type"]:checked').val();
 		var obj = {date: today, subtance: substanceType, location: place, associations: associations, emotions: emotion, attitude: attitude};
-		console.log(obj);
+		relapseData.push(obj);
+		$('#clean-time').text(updateDaysClean(relapseData));
 	}
 
 	 // $('input[name="question' + questionCount + '"]:checked').val();
@@ -297,6 +300,21 @@ $(function() {
 
 		return Math.floor(time / convertNum)
 	};
+
+	function updateRelapseMeter(num){
+		var randomNum = (Math.random() * 9).toFixed(1);
+		var $relapseText = $('#relapse-meter');
+		var $outer = $('#inner');
+		if(randomNum <= 3){
+			$relapseText.css('color', 'limegreen').text(randomNum);
+		} else if(randomNum > 3 && randomNum <= 6){
+			$relapseText.css('color', 'yellow').text(randomNum);
+		} else {
+			$relapseText.css('color', 'red').text(randomNum);
+		}
+	};
+
+	setInterval(updateRelapseMeter, 10000)
 
 	
 

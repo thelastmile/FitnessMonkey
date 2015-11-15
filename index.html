@@ -9,14 +9,14 @@
 	<!-- my styles -->
 	<link rel="stylesheet" type="text/css" href="lib/nv.d3.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="lib/d3.v3.js"></script>
+	<!--<script type="text/javascript" src="lib/d3.v3.min.js"></script>-->
 	<script type="text/javascript" src="lib/dimple.v2.1.2.min.js"></script>
 	<script type="text/javascript" src="lib/nv.d3.min.js"></script>
 
 </head>
 
 <body>
-	<div id="wrapper" class="container-fluid">
+	<div id="wrapper" class="container">
 		<!-- Navbar content -->
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -35,13 +35,12 @@
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			    <ul class="nav navbar-nav navbar-right">
-			    	
 			    	<li><a href="#">Members: <span id="num">0</span></a></li>
 			    </ul>
 			  </div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
-
+	<div class="row">
 		<div class="col-md-8">
 			<div class="jumbotron">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -57,10 +56,10 @@
 					    <div class="item">
 					      	<img src="assets/handcuffs.png" alt="...">
 					    </div>
-					    <div class="item">
+					     <div class="item">
 					      	<img src="assets/bar-chart.png" alt="...">
 					    </div>
-					    <div class="item">
+					     <div class="item">
 					      	<img src="assets/donut-chart.png" alt="...">
 					    </div>
 					    <div class="item">
@@ -81,13 +80,13 @@
 					     <div class="item">
 					      	<img src="assets/runners.jpg" alt="...">
 					      	<div class="carousel-caption">
-        						<h2>Life is about running!</h2><h3>grab your shoes</h3>
+        						<h2>Life is about running!</h2>
       						</div>
-					    </div>
+					     </div>
 					    <div class="item">
 					      	<img src="assets/x-ray-runner.jpg" alt="...">
 					      	<div class="carousel-caption">
-        						<h2>Healthy People Live Longer and Exercise!</h2>
+        				<h2>Healthy People Live Longer!</h2>
       						</div>
 					    </div>
 					    <div class="item">
@@ -101,30 +100,9 @@
 					    </div>
 					</div>
 				</div>
-				<marquee id="marquee">Join The Fitness Revolution!!!</marquee>	
+				<marquee id="marquee"><h3>Stay Healthy, Join The Fitness Revolution !!!</h3></marquee>	
 			</div>
-				<div class="row">
-					<div class="col-md-12">
-							<h3><b>Fitness Monkey</b></h3>
-							<img id="monkey3"src="assets/monkey.png">
-							 <i>A health and physical fitness tracker.</i> 
-							 <h4> To keep the Monkey of addiction off  your back through physical fitness!</h4><br>
-							 
-							<ul>
-							<li><img class="logos-row"src="assets/runners.jpg"><em>Log on and track your workouts</li>
-							 <li><img class="logos-row"src="assets/x-ray-runner.jpg">View real time data of your results</li>
-							 <li><img class="logos-row"src="assets/x-ray-runner.jpg">Hear from personal <a href="#">trainers </a></li>
-							 <li><img class="logos-row"src="assets/marathon.png">Compete with other fitness <a href="#">Monkeys.</a></li> 
-							 <li><img class="logos-row"src="assets/nike.png"><b>Nike, Under Armor, Adidas</b> and more.</li>
-							 <li><img class="logos-row"src="assets/woman_exercise.jpg">Learn  new <a href="#">excerises</a> and meet other fitness Monkeys.</li>
-							 <br>
-							 <p>Fitness Monkey provides an avenue to stay healthy and fit while on vacation, at home or work. Daily workouts are provided with, visual data of personal workouts, updates, resources for treatment, and health tips.</em></p>
-							</ul>
-				</div>	
-			</div>
-
-		</div>			
-	
+	</div>
 
 		<div id="userColumn" class="col-md-4">
 			<!-- navbar icons (hidden on login page)-->
@@ -253,13 +231,55 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div><!-- /.row with jumbotron -->
+	
+				<div class="row">
+					<div class="col-md-12">
+							<h3><b>Fitness Monkey</b></h3>
+							<img id="monkey3"src="assets/monkey.png">
 
+							 <i>A health and physical fitness tracker.</i>
 
+							 <em><h4>To keep the Monkey of addiction off your back through physical fitness!</h4></em>
+					</div>
+				</div>
+				<div class="lower-frame">
+					<div class="row">
+					<div class="col-md-12">
+						<ul>
+							<li><img class="logos-row"src="assets/woman_exercise.jpg"> Log and track <a href="#">workouts</a>...</li>
 
+							 <li><img class="logos-row"src="assets/x-ray-runner.jpg"> View <a href="#">data</a> results...</li>
+
+							 <li><img class="logos-row"src="assets/nike.png"> Sponsored by NIKE and <a href="#">more</a>...</li>
+						</ul>
+				  </div>
+				</div>	
+
+				  <div class="row">
+						<div class="col-md-12">
+						 <ul>
+							<li><img class="logos-row"src="assets/woman_jogging.jpg" alt=""> Meet Personal <a href="#">Trainers</a>...</li>
+
+							 <li><img class="logos-row"src="assets/runners.jpg"> <a href="#">Join</a> Fitness Junkies...</li>
+
+							 <li><img class="logos-row"src="assets/Womens-Health-Month.jpg"> Upcoming <a href="#"> Events</a>...</li>
+							</ul>
+						</div>
+					</div>
+					
+				</div><!-- lower frame -->
+					<div class="row">
+
+							 <div class="col-md-12">
+							 <p>Fitness Monkey provides a way to stay healthy and fit while on vacation, at home or work. With workouts, trainers, visual data of workouts, updates and health tips.</p>
+							 </div>
+					</div>
+	</div><!-- /.wrapper div -->
+					
 	<script type="text/javascript" src="lib/jquery.js"></script>
 	<script type="text/javascript" src="bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="resources/holderJS_lite/lib/holder.min.js"></script>
+	<!--<script type="text/javascript" src="resources/holderJS_lite/lib/holder.min.js"></script>-->
 	<script type="text/javascript" src="scripts/joeScript.js"></script>
 	<script type="text/javascript" src="scripts/script.js"></script>
 	<script type="text/javascript" src="scripts/myd3.js"></script>

@@ -1,7 +1,7 @@
 {"workouts" : [
 		{
 			"date": "1/1/2015",
-			"type": "run",
+			"type": "running",
 			"duration": 30,
 			"intensity": 5,
 			"urge_to_relapse":1,
@@ -29,15 +29,15 @@
 		{
 			"date": "1/4/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 6,
 			"fun_factor": null,
-			"category": "cardio"
+			"category": null
 		},
 		{
 			"date": "1/5/2015",
-			"type": "weight training",
+			"type": "weights",
 			"duration": 35,
 			"intensity": 8,
 			"urge_to_relapse": 2,
@@ -55,7 +55,7 @@
 		},
 		{
 			"date": "1/7/2015",
-			"type": "burpees",
+			"type": "steps",
 			"duration": 35,
 			"intensity": 9,
 			"urge_to_relapse":4,
@@ -65,24 +65,24 @@
 		{
 			"date": "1/8/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse":7,
 			"fun_factor": null,
-			"category": "strength"
+			"category": null
 		},
 		{
 			"date": "1/9/2015",
-			"type": "baseball",
+			"type": "tennis",
 			"duration": 55,
 			"intensity": 7,
 			"urge_to_relapse": 2,
 			"fun_factor": 7,
-			"category": " sports"
+			"category": "sports"
 		},
 		{
 			"date": "1/10/2015",
-			"type": "run",
+			"type": "running",
 			"duration": 50,
 			"intensity": 6,
 			"urge_to_relapse": 1,
@@ -91,39 +91,39 @@
 		},
 		{
 			"date": "1/11/2015",
-			"type": "hiking",
+			"type": "running",
 			"duration": 120,
 			"intensity": 8,
 			"urge_to_relapse": 1,
 			"fun_factor": 8,
-			"category": "strength"
+			"category": "cardio"
 		},
 		{
 			"date": "1/12/2015",
-			"type": "tai-chi",
+			"type": "yoga",
 			"duration": 75,
 			"intensity": 7,
 			"urge_to_relapse": 1,
 			"fun_factor": 8,
-			"category": "sports"
+			"category": "strength"
 		},
 		{
 			"date": "1/13/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 7,
 			"fun_factor": null,
-			"category": "cardio"
+			"category": null
 		},
 		{
 			"date": "1/14/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 8,
 			"fun_factor": null,
-			"category": "strength"
+			"category": null
 		},
 		{
 			"date": "1/15/2015",
@@ -136,7 +136,7 @@
 		},
 		{
 			"date": "1/16/2015",
-			"type": "run",
+			"type": "running",
 			"duration": 50,
 			"intensity": 8,
 			"urge_to_relapse": 1,
@@ -145,7 +145,7 @@
 		},
 		{
 			"date": "1/17/2015",
-			"type": "weight training",
+			"type": "weights",
 			"duration": 60,
 			"intensity": 9,
 			"urge_to_relapse": 2,
@@ -155,15 +155,15 @@
 		{
 			"date": "1/18/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 8,
 			"fun_factor": null,
-			"category": "sports"
+			"category": null
 		},
 		{
 			"date": "1/19/2015",
-			"type": "swiming",
+			"type": "steps",
 			"duration": 40,
 			"intensity": 9,
 			"urge_to_relapse": 3,
@@ -173,11 +173,11 @@
 		{
 			"date": "1/20/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 7,
 			"fun_factor": null,
-			"category": "strength"
+			"category": null
 		},
 		{
 			"date": "1/21/2015",
@@ -191,15 +191,15 @@
 		{
 			"date": "1/22/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 6,
 			"fun_factor": null,
-			"category": "cardio"
+			"category": null
 		},
 		{
 			"date": "1/23/2015",
-			"type": "weight training",
+			"type": "weights",
 			"duration": 25,
 			"intensity": 8,
 			"urge_to_relapse": 1,
@@ -208,7 +208,7 @@
 		},
 		{
 			"date": "1/24/2015",
-			"type": "handball",
+			"type": "tennis",
 			"duration": 75,
 			"intensity": 8,
 			"urge_to_relapse": 1,
@@ -217,7 +217,7 @@
 		},
 		{
 			"date": "1/25/2015",
-			"type": "dance",
+			"type": "dancing",
 			"duration": 85,
 			"intensity": 8,
 			"urge_to_relapse": 3,
@@ -227,11 +227,11 @@
 		{
 			"date": "1/26/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 8,
 			"fun_factor": null,
-			"category": "strength"
+			"category": null
 		},
 		{
 			"date": "1/27/2015",
@@ -244,7 +244,7 @@
 		},
 		{
 			"date": "1/28/2015",
-			"type": "run",
+			"type": "running",
 			"duration": 40,
 			"intensity": 9,
 			"urge to relapse": 2,
@@ -254,29 +254,47 @@
 		{
 			"date": "1/29/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 7,
 			"fun_factor": null,
-			"category": "strength"
+			"category": null
 		},
 		{
 			"date": "1/30/2015",
-			"type": "weight training",
+			"type": "weights",
 			"duration": 55,
 			"intensity": 7,
 			"urge_to_relapse": 1,
 			"fun_factor": 5,
-			"category": "sports"
+			"category": "strength"
 		},
 		{
 			"date": "1/31/2015",
 			"type": null,
-			"duration": null,
+			"duration": 0,
 			"intensity": null,
 			"urge_to_relapse": 7,
 			"fun_factor": null,
-			"category": "cardio"
+			"category": null
+		}
+	],
+	"relapses": [
+		{
+			"date": "1/8/2015",
+			"substance": "alcohol",
+			"location": "club",
+			"associations": "Friends",
+			"emotions": "other",
+			"attitude": "positive"
+		},
+		{
+			"date": "1/28/2015",
+			"substance": "drugs",
+			"location": "home",
+			"associations": "alone",
+			"emotions": "hurt",
+			"attitude": "depressed"
 		}
 	]
 }

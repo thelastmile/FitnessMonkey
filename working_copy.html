@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div id="wrapper" class="container-fluid">
+	<div id="wrapper" class="container">
 		<!-- Navbar content -->
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
@@ -33,187 +33,216 @@
 
 			  <!-- Collect the nav links, forms, and other content for toggling -->
 			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="nav navbar-nav navbar-right">
-			    	
-			    	<li><a href="#">Members: <span id="num">0</span></a></li>
+			    <ul id="navbar-btn" class="nav navbar-nav navbar-right">
+			    	<li>
+			    		<button id="log-workout-btn" type="button" class="btn navbar-btn btn-success btn-sm">
+							<span class="glyphicon glyphicon-plus"></span>
+							 workout
+						</button>
+			    	</li>
+			    	<li>
+			    		<button id="log-relapse-btn" type="button" class="btn navbar-btn btn-danger btn-sm">
+							<span class="glyphicon glyphicon-minus"></span>
+							 relapse
+						</button>
+					</li>
+			    	<li class="navbar-text">Greetings <span id="username">Nuke</span></li>
+			    	<!-- <li><a href="#">Members: <span id="num">0</span></a></li> -->
 			    </ul>
 			  </div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 
 		<div class="container-fluid">
-			<div class="row">
-
-				<h4 class="pull-right">Days clean: <span id="clean-time">31</span></h4>
-				<h1>Greetings <span id="username">username</span></h1>
-			</div>
-			<div class="row">
-
-			<div class="col-sm-8 col">
-				<div>
-					<h4>Days since last workout: <span id="last-workout">3</span></h4>
-					<h4>Total workouts logged: <span id="total-workouts">3</span></h4>
-				</div>
-
-				<div id="workout-donut-chart">
-					<p>Workouts by Category</p>
-					<svg ></svg>				
-				</div>
-
-				<div id="workout-bar-chart">
-					<p>Workouts by Type</p>
-					<svg></svg>				
-				</div>
-
-				<div id="workout-line-chart">
-					<p>Duration of Workouts vs Occurrence of Relapse</p>
-					<svg></svg>
-				</div>
-			</div>
 			
-			<div class="col-sm-4 col">
-				<div id="workout-log">
-					<h3 class="text-center">Workout Log</h3>
-					<div id="workout-ad" class="ads">
-						<img data-src="holder.js/325x225?text=sponsors&outline=yes">
-						<button id="log-workout-btn" type="button" class="btn btn-primary btn-lg">Log Workout</button>
+			<div class="row">
+
+				<div class="col-sm-8 col">
+					<div class="row">
+						<div class="stats">
+							<ul class="list-unstyled list-horizontal nav-justified">
+								<li>
+									<p>Days Clean</p>
+									<p id="clean-time">31</p>
+								</li>
+								<li>
+									<p>Days Since Last Workout</p>
+									<p id="last-workout">3</p>
+								</li>
+								<li>
+									<p>Workout Days in a Row</p>
+									<p id="total-workouts">7</p>
+								</li>
+							</ul>
+						</div>
 					</div>
 
-					<form id="add-workout">
-					  	<div class="form-group">
-					    	<label for="type-input">What type of workout?</label>
-					    	<input type="text" class="form-control" id="type-input" placeholder="Type of workout">
-					  	</div>
-					  	<div class="form-group">
-					    	<label for="duration-input">What was the duration?</label>
-					    	<input type="number" class="form-control" id="duration-input" placeholder="duration in minutes" min="0">
-					  	</div>
-					  	<div class="form-group">
-					    	<label for="intensity-input">What was the intensity</label>
-					    	<input type="number" class="form-control" id="intensity-input" placeholder="rate the intensity level 1 - 9" min="1" max="9">
-					  	</div>					  	
-					  	<div class="form-group">
-					    	<label for="intensity-input">Rate your urge to relapse</label>
-					    	<input type="number" class="form-control" id="relapse-urge-input" placeholder="rate your urge to relapse 1 - 9" min="1" max="9">
-					  	</div>					  	
-					  	<div class="form-group">
-					    	<label for="intensity-input">Rate the fun factor</label>
-					    	<input type="number" class="form-control" id="fun-factor-input" placeholder="How fun was this workout 1 - 9" min="1" max="9">
-					  	</div>
-					  	<button type="submit" class="btn btn-success btn-lg">Submit</button>
-					</form>
-				</div>
-
-				<div id="relapse-log">
-					<h3 class="text-center">Log Relapse</h3>
-					<div id="relapse-ad" class="ads">
-						<img data-src="holder.js/325x225?text=sponsors&outline=yes">
-						<button id="log-relapse-btn" type="button" class="btn btn-default btn-lg">Log Relapse</button>
+					<div class="row">
+						<div id="workout-line-chart">
+							<button id="zoomIn" class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-minus"></span></button>
+							<button id="zoomOut"class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
+							<p>Duration of Workouts vs Occurrence of Relapse</p>
+							<svg></svg>
+						</div>
 					</div>
 
-					<form id="log-relapse">
-					  	<div class="form-group">
-					    	<label for="substance-input">What substance?</label><br>
-					    	<label class="radio-inline">
-								<input type="radio" name="substance-type" value="alcohol">
-								Alcohol
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="substance-type" value="drugs">
-							  	Drugs
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="substance-type" value="other">
-							  	Other
-							</label>
-					  	</div>
-					  	<div class="form-group">
-					    	<label for="duration-input">Where were you?</label>
-					    	<input type="text" class="form-control" id="location-input" placeholder="enter location of relapse" min="0">
-					  	</div>
-					  	<div class="form-group radio">
-					    	<label for="associations-input">Who were you with?</label><br>
-					    	<label class="radio-inline">
-								<input type="radio" name="association-type" value="friends">
-								Friends
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="association-type" value="family">
-							  	Family
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="association-type" value="alone">
-							  	Alone
-							</label>
-					  	</div>					  	
-					  	<div class="form-group radio">
-					    	<label for="emotion-input">What emotions were you experiencing?</label><br>
-					    	<label class="radio-inline">
-								<input type="radio" name="emotion-type" value="hurt">
-								Hurt
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="emotion-type" value="angry">
-							  	Angry
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="emotion-type" value="lonely">
-							  	Lonely
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="emotion-type" value="tired">
-							  	Tired
-							</label>
-							<label class="radio-inline">
-							  	<input type="radio" name="emotion-type" value="other">
-							  	Other
-							</label>
-					  	</div>		
-					  	<label for="emotion-input">Attitude moving forward?</label><br>			  	
-					  	<div class="radio">
-						  	<label>
-						    	<input type="radio" name="attitude-type" value="positive" >
-						    	Positive
-						  	</label>
-						</div>
-						<div class="radio">
-						  	<label>
-						    	<input type="radio" name="attitude-type" value="angry">
-						    	Angry
-						  	</label>
-						</div>
-						<div class="radio">
-						  	<label>
-						    	<input type="radio" name="attitude-type" value="depressed">
-						    	Depressed
-						  	</label>
-						</div>
-						<div class="radio">
-						  	<label>
-						    	<input type="radio" name="attitude-type" value="determined">
-						    	Determined
-						  	</label>
-						</div>
-					  	<button type="submit" class="btn btn-success btn-lg">Submit</button>
-					</form>
+
+					<div class="row">
+						<div id="workout-bar-chart">
+							<p>Workouts by Type</p>
+							<svg></svg>				
+						</div>						
+					</div>
 
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 col">
-				<div id="fitness-challenge">
-					<h3 class="text-center">Daily Fitness Challenge</h3>
-					<img class="img-circle" data-src="holder.js/300x300?text=challenge pic&outline=yes">
+			
+				<div class="col-sm-4 col">
+					<div id="workout-log">
+						<div class="row">
+							<h4>Relapse-meter</h4>
+							<div id="outer">
+									<p id="relapse-meter" class="text-center">2.9</p>
+							</div>
+						</div>
+
+						<div class="row">
+							<div id="workout-donut-chart">
+								<p>Workouts by Category</p>
+								<svg ></svg>				
+							</div>
+						</div>
+
+						<form id="add-workout">
+						  	<div class="form-group">
+						    	<label for="type-input">What type of workout?</label>
+						    	<input type="text" class="form-control" id="type-input" placeholder="Type of workout">
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="duration-input">What was the duration?</label>
+						    	<input type="number" class="form-control" id="duration-input" placeholder="duration in minutes" min="0">
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="intensity-input">What was the intensity</label>
+						    	<input type="number" class="form-control" id="intensity-input" placeholder="rate the intensity level 1 - 9" min="1" max="9">
+						  	</div>					  	
+						  	<div class="form-group">
+						    	<label for="intensity-input">Rate your urge to relapse</label>
+						    	<input type="number" class="form-control" id="relapse-urge-input" placeholder="rate your urge to relapse 1 - 9" min="1" max="9">
+						  	</div>					  	
+						  	<div class="form-group">
+						    	<label for="intensity-input">Rate the fun factor</label>
+						    	<input type="number" class="form-control" id="fun-factor-input" placeholder="How fun was this workout 1 - 9" min="1" max="9">
+						  	</div>
+						  	<button type="submit" class="btn btn-success btn-lg">Submit</button>
+						</form>
+					</div>
+
+					<div id="relapse-log">
+						
+
+						<form id="log-relapse">
+						  	<div class="form-group">
+						    	<label for="substance-input">What substance?</label><br>
+						    	<label class="radio-inline">
+									<input type="radio" name="substance-type" value="alcohol">
+									Alcohol
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="substance-type" value="drugs">
+								  	Drugs
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="substance-type" value="other">
+								  	Other
+								</label>
+						  	</div>
+						  	<div class="form-group">
+						    	<label for="duration-input">Where were you?</label>
+						    	<input type="text" class="form-control" id="location-input" placeholder="enter location of relapse" min="0">
+						  	</div>
+						  	<div class="form-group radio">
+						    	<label for="associations-input">Who were you with?</label><br>
+						    	<label class="radio-inline">
+									<input type="radio" name="association-type" value="friends">
+									Friends
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="association-type" value="family">
+								  	Family
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="association-type" value="alone">
+								  	Alone
+								</label>
+						  	</div>					  	
+						  	<div class="form-group radio">
+						    	<label for="emotion-input">What emotions were you experiencing?</label><br>
+						    	<label class="radio-inline">
+									<input type="radio" name="emotion-type" value="hurt">
+									Hurt
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="emotion-type" value="angry">
+								  	Angry
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="emotion-type" value="lonely">
+								  	Lonely
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="emotion-type" value="tired">
+								  	Tired
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="emotion-type" value="other">
+								  	Other
+								</label>
+						  	</div>		
+						  	<label for="emotion-input">Attitude moving forward?</label><br>			  	
+						  	<div class="radio">
+							  	<label>
+							    	<input type="radio" name="attitude-type" value="positive" >
+							    	Positive
+							  	</label>
+							</div>
+							<div class="radio">
+							  	<label>
+							    	<input type="radio" name="attitude-type" value="angry">
+							    	Angry
+							  	</label>
+							</div>
+							<div class="radio">
+							  	<label>
+							    	<input type="radio" name="attitude-type" value="depressed">
+							    	Depressed
+							  	</label>
+							</div>
+							<div class="radio">
+							  	<label>
+							    	<input type="radio" name="attitude-type" value="determined">
+							    	Determined
+							  	</label>
+							</div>
+						  	<button type="submit" class="btn btn-success btn-lg">Submit</button>
+						</form>
+
+					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col">
-				<div id="score-by-age-svg">
-					<h3 class="text-center">Average Score by Age Group</h3>
-					<svg></svg>
+			<div class="row">
+				<div class="col-sm-6 col">
+					<div id="fitness-challenge">
+						<h3 class="text-center">Daily Fitness Challenge</h3>
+						<img class="img-circle" data-src="holder.js/300x300?text=challenge pic&outline=yes">
+					</div>
+				</div>
+				<div class="col-sm-6 col">
+					<div id="score-by-age-svg">
+						<h3 class="text-center">Average Score by Age Group</h3>
+						<svg></svg>
+					</div>
 				</div>
 			</div>
-		</div>
 
 		
 	</div>

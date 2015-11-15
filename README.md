@@ -21,7 +21,7 @@ Greetings Team,
 
 11/5/2015
 
-Greetings Team
+Greetings Team,
 
 	It was finals week here at Code.7370, but we did manage to start putting together some data visualizations that load from the data/workouts.json file. I've included some screenshots in the notes folder and look forward to your feedback.
 
@@ -36,3 +36,15 @@ Greetings Team
 	Now that the finals in the books, we've got 4 weeks to make it happen.  Thanks for your support.
 
 	Chris
+
+11/10/2015
+
+Greetings Team,
+
+	It's official, Hans and Beverly are equity members of Team Fitness Monkey. We've separated our work into two pages. The landing page is index.html and the app page is working_copy.html.  We're still trying to sort out the data visualization charts and figuring out what will be the most useful data to keep our members fit & sober
+
+	We're also playing around with animations, so we'd appreciate your feedback on those items as well.
+
+	Thank you for your support.
+
+	Chris,
