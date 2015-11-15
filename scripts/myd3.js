@@ -96,4 +96,4 @@ function draw(data){
 
 		};
 
-		d3.json('data/workouts.json', draw);
+		d3.json('./FitnessMonkey/data/workouts.json', draw);

@@ -17,7 +17,7 @@ $(function() {
 		buildLineChart(dataTransformer.typeLineChart(workoutData), "Workouts by Type", "#workout-line-chart svg");		
 	};
 
-	d3.json('../data/new_workouts.json', loadDataRenderCharts);
+	d3.json('data/new_workouts.json', loadDataRenderCharts);
 
 	function buildDonutChart(data, title, selector){
 
