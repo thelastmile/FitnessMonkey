@@ -48,3 +48,17 @@ Greetings Team,
 	Thank you for your support.
 
 	Chris,
+
+11/19/2015
+
+Greetings Team,
+
+	TGIT...thank God it's Thursday, but we've still got a lot of work to do.  I'm having some success with the NVd3 to track the workout data, but I'd like to find a way to incorporate the relapse data on top of it and I'm not sure what would be the best chart to use.  I've been looking at line-plus-bar, scatter-plus-line, and multi charts. They each seem to have their pros and cons.
+
+	The rest of the team is working on making a responsive landing page with the color scheme David gave us. It's really important for us to make this thing look good.
+
+	I know it's almost 'feature-freeze' time, but we'd like to add a Daily Fitness Challenge component to the page the allows the user to take the challenge, log their results, and chart them against other Fitness Monkeys who've taken the challenge.
+
+	Thank you, thank you, thank you for all your help and support.
+
+	Chris, Joe, Jorge, & Luke

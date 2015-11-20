@@ -1,0 +1,8 @@
+Hey, attached is a suggested redesign for Fitness Monkey. It's mostly rearrangement and simplification of elements, a new color palette, and a new font. I may have time to think of a new logo, but I want to see if the Fitness Monkey team likes my direction first. 
+
+If they do like the direction, tell them to try to extrapolate and follow my aesthetic (colors, spacing, etc.) when designing the rest of the UI that I didn't have time to get to. They can ask me any questions via email and when I come in on Wednesday if they need to.
+
+Attached are also the color palette with hex codes, and the Proxima Nova font that I used.
+
+Please share this email and the attached files with the Fitness Monkey team. Thanks!
+David

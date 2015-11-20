@@ -1,5 +1,6 @@
 $(function(){
-	// setInterval(memberCount, 1000);
+
+	 setInterval(memberCount, 1000);
 	var $signupBtn = $('#signupBtn');
 
 	// hide all pages except for the login page
@@ -88,7 +89,6 @@ $(function(){
 		$('#optionsPage').show();
 	})
 
-
 	// Navbar functionality
 
 	// Home icon takes you to login page
@@ -127,33 +127,7 @@ $(function(){
 		console.log('edit user info page');
 	})
 	
-
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Random member count generator
 function memberCount(){
