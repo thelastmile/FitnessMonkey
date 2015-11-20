@@ -9,277 +9,207 @@
 	<!-- my styles -->
 	<link rel="stylesheet" type="text/css" href="lib/nv.d3.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<!--<script type="text/javascript" src="lib/d3.v3.min.js"></script>-->
+	<script type="text/javascript" src="lib/d3.v3.js"></script>
 	<script type="text/javascript" src="lib/dimple.v2.1.2.min.js"></script>
 	<script type="text/javascript" src="lib/nv.d3.min.js"></script>
-
 </head>
 
+
 <body>
-	<div id="wrapper" class="container">
-		<!-- Navbar content -->
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			    </button>
-			    <img id="logo" class="pull-left" src="assets/monkey.png">
-			    <a class="navbar-brand" href="#">Fitness Monkey</a>
-			  </div>
-
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="nav navbar-nav navbar-right">
-			    	<li><a href="#">Members: <span id="num">0</span></a></li>
-			    </ul>
-			  </div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
-	<div class="row">
-		<div class="col-md-8">
-			<div class="jumbotron">
-				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					
-				  	<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-					    <div class="item active">
-					      	<img src="assets/monkey.png" alt="...">
-					      	<div class="carousel-caption">
-        						<h3>Addiction Recovery through Physical Fitness</h3>
-      						</div>
-					    </div>
-					    <div class="item">
-					      	<img src="assets/handcuffs.png" alt="...">
-					    </div>
-					     <div class="item">
-					      	<img src="assets/bar-chart.png" alt="...">
-					    </div>
-					     <div class="item">
-					      	<img src="assets/donut-chart.png" alt="...">
-					    </div>
-					    <div class="item">
-					      	<img src="assets/line-chart.png" alt="...">
-					    </div>
-					    <div class="item">
-					      	<img src="assets/bottle.png" alt="...">
-					    </div>
-					    <div class="item">
-					      	<img src="assets/mobile.png" alt="...">
-					    </div>					    
-					    <div class="item">
-					      	<img src="assets/fitband.png" alt="...">
-					    </div>
-					    <div class="item">
-					      	<img src="assets/marathon.png" alt="...">
-					    </div>
-					     <div class="item">
-					      	<img src="assets/runners.jpg" alt="...">
-					      	<div class="carousel-caption">
-        						<h2>Life is about running!</h2>
-      						</div>
-					     </div>
-					    <div class="item">
-					      	<img src="assets/x-ray-runner.jpg" alt="...">
-					      	<div class="carousel-caption">
-        				<h2>Healthy People Live Longer!</h2>
-      						</div>
-					    </div>
-					    <div class="item">
-					      	<img src="assets/Womens-Health-Month.jpg" alt="...">
-					    </div>
-					     <div class="item">
-					      	<img src="assets/woman_exercise.jpg" alt="...">
-					      	<div class="carousel-caption">
-        						<h2>Have fun, stay fit with our tips!</h2>
-      						</div>
-					    </div>
-					</div>
-				</div>
-				<marquee id="marquee"><h3>Stay Healthy, Join The Fitness Revolution !!!</h3></marquee>	
-			</div>
-	</div>
-
-		<div id="userColumn" class="col-md-4">
-			<!-- navbar icons (hidden on login page)-->
-			<ul id="navElements" class="nav nav-tabs nav-justified">
-			  	<li id="navHome" title="home" role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-			  	<li id="navCardio" title="cardio challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
-			  	<li id="navSports" ="sports challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-flag"></span></a></li>
-			  	<li id="navStrength" title="strength challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-tower"></span></a></li>
-			  	<li id="navRelapse" title="relapse" role="presentation"><a href="#"><span class="glyphicon glyphicon-flash"></span></a></li>
-			  	<li id="navUser" title="edit user info" role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-			</ul>
-
-			<!-- User signin form -->
-		    <form id="loginPage" class="page form-signin" role="form">
-		      	<h2 class="form-signin-heading text-center">Join the Revolution</h2>
-		      	<div class="form-group">
-		        	<input id="username" type="text" class="form-control" placeholder="username" required autofocus>
-		      	</div>
-		      	<div class="form-group">
-		        	<input id="password" type="password" class="form-control" placeholder="password" required>
-		      	</div>
-		        <button id="loginBtn" class="btn btn-success btn-block" type="button">Login</button>
-		        <br>
-		        <p class="text-center">To register a new account click here</p>
-		        <button id="signupBtn" class="btn btn-primary btn-block" type="button">Become a member</button>
-		        <img src="assets/monkey.png"><caption>Get Buff</caption>
-		    </form>
-
-		    <!-- Become a member form -->
-		    <form id="memberSignup" class="page" role="form">
-		    	<h2>Membership form</h2>
-				<div class="form-group">
-				    <label for="inputUsername">Select Username</label>
-				    <input type="text" class="form-control" id="inputUsername" placeholder="select a username">
-				</div>
-				<div class="form-group">
-				    <label for="inputPassword1">Password</label>
-				    <input type="password" class="form-control" id="inputPassword1" placeholder="select a password">
-				</div>				
-				<div class="form-group">
-				    <label for="inputPassword2">Reenter your password</label>
-				    <input type="password" class="form-control" id="inputPassword2" placeholder="reenter a password">
-				</div>
-				 <div class="form-group">
-    				<label for="inputEmail">Enter your email address</label>
-    				<input type="email" class="form-control" id="InputEmail" placeholder="email">
-  				</div>
-				<div class="form-group">
-				    <label for="exampleInputFile">Provide a profile pic</label>
-				    <input type="file" id="exampleInputFile">
-				</div>
-				  <button id="submitBtn" type="submit" class="btn btn-success">Login</button>
-			</form>
-
-			<!-- Workout/Recovery Selection Page -->
-			<div id="optionsPage" class="page">
-				<h4 class="text-center">Make your selection</h4>
-				<button id="workoutBtn" class="btn btn-block btn-success">Workout</button>
-				<img src="assets/monkey.png">
-				<button id="recoveryBtn" class="btn btn-block btn-info">Recovery</button>
-			</div>
-
-			<!-- Workout Selection Page -->
-			<div id="workoutPage" class="page">
-				<h4 class="text-center">Select your Workout Challenge</h4 >
-				<button id="cardioBtn" class="btn btn-block btn btn-danger">Cardio</button>
-				<button id="sportBtn" class="btn btn-block btn btn-primary">Sport</button>
-				<button id="strengthBtn" class="btn btn-block btn btn-warning">Strength</button>
-			</div>
-
-
-			<!-- Recovery Selection Page -->
-			<div id="recoveryPage" class="page">
-				<h4 class="text-center">Recovery Tracker</h4>
-				<button id="setGoalBtn" class="btn btn-block btn-success">Set Goal</button>
-				<img src="assets/monkey.png">
-				<button id="lapseBtn" class="btn btn-block btn-danger">Lapse Log</button>
-			</div>
-
-			<!-- Cardio Workout Page -->
-			<div id="cardioPage" class="page">
-				<h4 class="text-center">Cardio Challenge</h4>
-				<ol>
-					<li>Run 5 miles</li>
-				</ol>
-				<button class="btn btn-block btn-primary doneBtn">Done</button>
-			</div>
-
-			<!-- Sport workout page -->
-			<div id="sportPage" class="page">
-				<h4 class="text-center">Sports Challenge</h4>
-				<p class="lead">Go play soccer with your friends at MacArthur Park.</p>
-				<button class="btn btn-block btn-primary doneBtn">Done</button>
-			</div>
-
-			<!-- strength workout page -->
-			<div id="strengthPage" class="page">
-				<h4 class="text-center">Muscle Challenge</h4>
-				<p class="lead"></p>
-				<ol>
-					<li>50 squats</li>
-					<li>50 pushups</li>
-					<li>20 pull-ups</li>
-				</ol>
-				<button class="btn btn-block btn-primary doneBtn">Done</button>
-			</div>
-
-			<!-- Set goals page -->
-			<div id="setGoalsPage" class="page">
-				<h4 class="text-center">Set Goals Page</h4>
-				<button class="btn btn-primary btn-block goBtn">Go</button>
-			</div>
-
-			<!-- Log relapse page -->
-			<div id="logLapsePage" class="page">
-				<h4 class="text-center">Log Relapse Page</h4>
-				<button class="btn btn-primary btn-block goBtn">Go</button>
-			</div>			
-
-			<!-- Data Visualization Page -->
-			<div id="visualPage" class="page">
-				<h4 class="text-center">Fitness/Recovery Tracker</h4>
-				<!-- append d3 here -->
-				<div id="d3Page">
-					<h2>D3 Chart & Buttons</h2>
-				</div>
+	<!-- wrapper for entire page -->
+	<div class="wrapper">
+		<!-- container for first two rows -->
+		<div class="fm-banner container-fluid">
+		<!-- first row landing page-->
+		<div class="row">
+			<div class="col-md-12 text-right">
+				<p>This many people have gotten the Monkey off their backs <u><span id="num"> 0</span></u></p>
 			</div>
 		</div>
-	</div><!-- /.row with jumbotron -->
-	
-				<div class="row">
-					<div class="col-md-12">
-							<h3><b>Fitness Monkey</b></h3>
-							<img id="monkey3"src="assets/monkey.png">
 
-							 <i>A health and physical fitness tracker.</i>
-
-							 <em><h4>To keep the Monkey of addiction off your back through physical fitness!</h4></em>
+		<!-- second row landing page -->
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row margin-top-45">
+					<div class="col-md-3">
+						<img src="assets/monkey.png" id="monkey1" class="img-responsive">
 					</div>
-				</div>
-				<div class="lower-frame">
-					<div class="row">
-					<div class="col-md-12">
-						<ul>
-							<li><img class="logos-row"src="assets/woman_exercise.jpg"> Log and track <a href="#">workouts</a>...</li>
-
-							 <li><img class="logos-row"src="assets/x-ray-runner.jpg"> View <a href="#">data</a> results...</li>
-
-							 <li><img class="logos-row"src="assets/nike.png"> Sponsored by NIKE and <a href="#">more</a>...</li>
-						</ul>
-				  </div>
-				</div>	
-
-				  <div class="row">
-						<div class="col-md-12">
-						 <ul>
-							<li><img class="logos-row"src="assets/woman_jogging.jpg" alt=""> Meet Personal <a href="#">Trainers</a>...</li>
-
-							 <li><img class="logos-row"src="assets/runners.jpg"> <a href="#">Join</a> Fitness Junkies...</li>
-
-							 <li><img class="logos-row"src="assets/Womens-Health-Month.jpg"> Upcoming <a href="#"> Events</a>...</li>
-							</ul>
+					<div class="col-md-9 title-text">
+						<div>
+							<strong>Fitness Monkey</strong> a new kind of Health & Fitness Tracker.
+						</div>
+						<div class="margin-top-20">		
+							Introducing a <strong>Fitness Program</strong><br> for <strong>Addiction Recovery.</strong>
 						</div>
 					</div>
-					
-				</div><!-- lower frame -->
-					<div class="row">
+				</div>
+			</div>
+				
+			<!-- user column app guts -->			
+			<div id="userColumn" class="col-md-4">					
+				<!-- navbar icons (hidden on login page)-->
+				<ul id="navElements" class="nav nav-tabs nav-justified">
+				  	<li id="navHome" title="home" role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+				  	<li id="navCardio" title="cardio challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
+				  	<li id="navSports" ="sports challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-flag"></span></a></li>
+				  	<li id="navStrength" title="strength challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-tower"></span></a></li>
+				  	<li id="navRelapse" title="relapse" role="presentation"><a href="#"><span class="glyphicon glyphicon-flash"></span></a></li>
+				  	<li id="navUser" title="edit user info" role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+				</ul>
 
-							 <div class="col-md-12">
-							 <p>Fitness Monkey provides a way to stay healthy and fit while on vacation, at home or work. With workouts, trainers, visual data of workouts, updates and health tips.</p>
-							 </div>
+				<!-- User signin form -->
+			    <form id="loginPage" class="page form-signin" role="form">
+			      	<h2 class="form-signin-heading">Join the Revolution</h2>
+			      	<div class="form-group">
+			        	<input id="username" type="text" class="form-control" placeholder="USERNAME" required autofocus>
+			      	</div>
+			      	<div class="form-group">
+			        	<input id="password" type="password" class="form-control" placeholder="PASSWORD" required>
+			      	</div>
+				        <button id="loginBtn" class="btn btn-success btn-block" type="button">LOGIN</button>
+				        <button id="signupBtn" class="btn btn-primary btn-block" type="button">BECOME A MEMBER</button>
+			    </form>
+			    
+			    <!-- Become a member form -->
+			    <form id="memberSignup" class="page" role="form">
+			    	<h2>Membership form</h2>
+					<div class="form-group">
+					    <label for="inputUsername">Select Username</label>
+					    <input type="text" class="form-control" id="inputUsername" placeholder="select a username">
 					</div>
-	</div><!-- /.wrapper div -->
+					<div class="form-group">
+					    <label for="inputPassword1">Password</label>
+					    <input type="password" class="form-control" id="inputPassword1" placeholder="select a password">
+					</div>				
+					<div class="form-group">
+					    <label for="inputPassword2">Reenter your password</label>
+					    <input type="password" class="form-control" id="inputPassword2" placeholder="reenter a password">
+					</div>
+					 <div class="form-group">
+	    				<label for="inputEmail">Enter your email address</label>
+	    				<input type="email" class="form-control" id="InputEmail" placeholder="email">
+	  				</div>
+					<div class="form-group">
+					    <label for="exampleInputFile">Provide a profile pic</label>
+					    <input type="file" id="exampleInputFile">
+					</div>
+					   <button id="submitBtn" type="submit" class="btn btn-success">Login</button>
+				</form>
+
+				<!-- Workout/Recovery Selection Page -->
+				<div id="optionsPage" class="page">
+					<h4 class="text-center">Make your selection</h4>
+					<button id="workoutBtn" class="btn btn-block btn-success">Workout</button>
+					<button id="recoveryBtn" class="btn btn-block btn-info">Recovery</button>
+				</div>
+				
+				<!-- Workout Selection Page -->
+				<div id="workoutPage" class="page">
+					<h4 class="text-center">Select your Workout Challenge</h4 >
+					<button id="cardioBtn" class="btn btn-block btn btn-danger">Cardio</button>
+					<button id="sportBtn" class="btn btn-block btn btn-primary">Sport</button>
+					<button id="strengthBtn" class="btn btn-block btn btn-warning">Strength</button>
+				</div>
+
+				<!-- Recovery Selection Page -->
+				<div id="recoveryPage" class="page">
+					<h4 class="text-center">Recovery Tracker</h4>
+					<button id="setGoalBtn" class="btn btn-block btn-success">Set Goal</button>
+					<img src="assets/monkey.png">
+					<button id="lapseBtn" class="btn btn-block btn-danger">Lapse Log</button>
+				</div>
+
+				<!-- Cardio Workout Page -->
+				<div id="cardioPage" class="page">
+					<h4 class="text-center">Cardio Challenge</h4>
+					<ol>
+						<li>Run 5 miles</li>
+					</ol>
+					<button class="btn btn-block btn-primary doneBtn">Done</button>
+				</div>
+
+				<!-- Sport workout page -->
+				<div id="sportPage" class="page">
+					<h4 class="text-center">Sports Challenge</h4>
+					<p class="lead">Go play soccer with your friends at MacArthur Park.</p>
+					<button class="btn btn-block btn-primary doneBtn">Done</button>
+				</div>
+
+				<!-- strength workout page -->
+				<div id="strengthPage" class="page">
+					<h4 class="text-center">Muscle Challenge</h4>
+					<p class="lead"></p>
+					<ol>
+						<li>50 squats</li>
+						<li>50 pushups</li>
+						<li>20 pull-ups</li>
+					</ol>
+					<button class="btn btn-block btn-primary doneBtn">Done</button>
+				</div>
+
+				<!-- Set goals page -->
+				<div id="setGoalsPage" class="page">
+					<h4 class="text-center">Set Goals Page</h4>
+					<button class="btn btn-primary btn-block goBtn">Go</button>
+				</div>
+
+				<!-- Log relapse page -->
+				<div id="logLapsePage" class="page">
+					<h4 class="text-center">Log Relapse Page</h4>
+					<button class="btn btn-primary btn-block goBtn">Go</button>
+				</div>			
+
+				<!-- Data Visualization Page -->
+				<div id="visualPage" class="page">
+					<h4 class="text-center">Fitness/Recovery Tracker</h4>
+					<!-- append d3 here -->
+					<div id="d3Page">
+						<h2>D3 Chart & Buttons</h2>
+					</div>
+				</div>
+			</div><!-- end of user column app guts -->
+		</div><!-- end of second row landing page-->
+		</div><!-- end of container for first two rows -->
+
+		<div class="container margin-top-20">
+			<!-- third row -->
+			<div class="row chartrows">
+				<div class="col-md-6 description-text" >
+					<p>Real-time intertactive charts<br> to monitor goals and achievements.</p>
+				</div>				
+
+				<div class="col-md-6 charts">
+					<img class="img-responsive " src="assets/working_copy.png" alt="">
+				</div>
+			</div><!-- end of  third row -->
+
+			<!-- forth row -->
+			<div class="row margin-top-20 chartrows">
+				<div class="col-md-6 description-text">
+					<p>Push alerts to warn users<br>and coaches of relapses.</p>
+				</div>				
+
+				<div class="col-md-6 charts">
+					<img class="img-responsive" src="assets/working_copy.png" alt="">
+				</div>
+			</div><!-- end of  forth row -->
+
+
+			<!-- fifth row -->
+			<div class="row margin-top-20">
+				<div class="col-md-12 description-text">
+					<p>Ipsum olerai poltis amour. Fuctris patris del amour fati.</p>
+				</div>				
+
+				</div><!-- end of  fifth row -->
+
+		</div><!-- en of container -->
+
+	</div><!--end of wrapper for entire page -->	
 					
 	<script type="text/javascript" src="lib/jquery.js"></script>
 	<script type="text/javascript" src="bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-	<!--<script type="text/javascript" src="resources/holderJS_lite/lib/holder.min.js"></script>-->
+	<!-- <script type="text/javascript" src="resources/holderJS_lite/lib/holder.min.js"></script> -->
 	<script type="text/javascript" src="scripts/joeScript.js"></script>
 	<script type="text/javascript" src="scripts/script.js"></script>
 	<script type="text/javascript" src="scripts/myd3.js"></script>

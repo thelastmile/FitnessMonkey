@@ -1,156 +1,176 @@
-
-body{
-	background-color: #286090;
+.fm-banner {
+	padding-bottom:5em;
+	padding-top:5em;
+	font-face-name:"Proxima Nova";
+	/*background-image: url("../assets/star.jpg");
+	background-repeat: no-repeat;*/
 	color: floralwhite;
+  	background: linear-gradient(#111630, #2C2C59, #393F5F);	
+  /*background colors #010228, #212143, #55579B*/ /*#111630, #171240, #60647A*/ /*#111630, #0A0A48, #60647A*/
 }
+
+.margin-top-20 {
+	margin-top:20px;
+}
+
+.margin-top-45 {
+	margin-top:4.5em;
+}
+
+.text-right {
+	font-size: 1.5em;
+}
+
+.title-text {
+	font-size:2em;
+}
+
 .page {
 	display: none;
 }
-/*----------top left logo*/
-#logo {
-	width: 3em;
-	height: auto;
-	margin-top: 5px;
-	margin-right: 5px;
-}
-.jumbotron {
-	width: 50em;
-	height: 411px;
-	margin: 0 auto;
-	background-color: black;
-	border: 1px solid dodgerblue;
-}
-.carousel-inner > .item > img {
-	width: 100%;
-	height: 307px;
-	
-}
-#myCarousel{
-	width: 63%;
-	float:left;
-}
-.carousel-caption h2,h3{
-	color: red;
-}
-.col-md-4 {
-	height: 500px;
-}
-#signin img {
-	width: 15em;
-	height: auto;
-	margin: 2em;
-}
- .col-md-12 h3{
+
+a {
 	color: white;
-	text-decoration: underline;
+	font-size: 0.9em;
+	
+	padding-right: 13em;
+	margin-top: 2em;	
 }
- h4{
-	color: black;
+
+.description-text p {
+	margin-top: 4.5em;
+  font-size: 1.5em;
+
 }
-.col-md-12{
-	color:white;
-	text-align: justify;
+
+/* user column styles
+-------------------------------------*/
+/*joint the revolution section*/
+.form-signin-heading {
+	margin-top: 2em;
+
 }
-i{
-	font-size: 1.3em;
+
+#username {
+	width: 23em;
+	margin-top: 1em;
+	border: none;
+	border-bottom: 1px solid white;	 
+	background-color: rgba(0, 29, 255, 0);
+	border-radius: 0;
+	box-shadow: none;
 }
- a{
-	color:#940000;
+
+input::-placeholder {
+	color: white;
 }
- .col-md-12 li{
- 	padding: 1%;
-	margin-left: 1em;
-	display: inline-block;
-	list-style: none;
+
+#password {
+	width:  23em;
+	margin-top: 2em;
+	border: none;
+	border-bottom: 1px solid grey;
+	background-color: rgba(0, 29, 255, 0);
+	border-radius: 0;
+	box-shadow: none;
+
 }
- p{
-	font-size: 1.3em;
+
+#loginBtn {
+	margin-left: 0;
+	width:  23em;
+	margin-top: 2.5em;
+	margin-bottom: 1.5em;
+	border-color: #00ebd2;
+	color: #00ebd2;
+	background-color: rgba(0, 29, 255, 0);
+	border-radius: 0;
+
 }
-#marquee h3{
-	color:#2CA02C;
+
+#signupBtn {
+	margin-left: 0;
+	width:  23em;
+	border-color: #00ebd2;
+	color: #00ebd2;
+	background-color: rgba(0, 29, 255, 0);
+	border-radius: 0;
 }
-#monkey3{
-	width: 3em;
-	height: 3em;
+
+/*******************************/
+.chartrows {
+	border-bottom: 1px solid lightgray;/*#00ebd2*/
 }
-.logos-row{
-	border-radius: 25%;
-	border: 1px solid black;
-	width: 5.5em;
-	height: 5.5em;
+
+.charts {
+	margin-bottom: 20px;
 }
-.lower-frame{
-	border:1px solid black;
-	border-radius: 1em;
-	background-color:#003C52;
-}
+
+/*//////////////////////////////////////////////////////////////////////*/
+	
+/*inside the app guts*/
 table {
 	background-color: white;
 	text-align: center;
 	border-radius: .5em;
 }
+
 #log {
 	background-color: white;
 	border: 1px solid dodgerblue;
 	border-radius: 1em;
 	text-align: center;
 }
+
 #log li {
 	padding: 1em;
 	border-bottom: 1px solid lightgray;
 }
+
 #log li:last-child {
 	border-bottom: none;
 }
+
 svg {
 	background-color: floralwhite;
 	border: 1px solid dodgerblue;
 	margin: 0 auto;
 }
+
 .axis path, .axis line {
 	fill: none;
 	stroke: limegreen;
 	shape-rendering: crispEdges;
 }
+
 .axis text {
 	fill: limegreen;
 	font-family: sans-serif;
 	font-size: 8px;
 }
+
 circle:hover {
 	fill: red;
 }
-/* user column styles
--------------------------------------*/
-#userColumn {
-	background-color: #003C52;
-	height: 411px;
-}
-#userColumn img {
-	width: 50%;
-	height: 8.5em;
-	margin-top: 5px;
-}
-.btn-block {
-	width: 90%;
-	margin: 0 auto;
-}
+
 /* OPTIONS PAGE
 --------------------------------------*/
 #options img {
 	width: 50%;
 }
+
 #options button {
 	margin: 10px auto;
 }
+
 /* RECOVERY PAGE
 --------------------------------------*/
 #recoveryPage img {
 	width: 50%;
 }
+
 #add-workout {
 	width: 50%;
 	color: black;
 }
-
 

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<head>
+	<title>Reformatted Site (in progress)</title>
+	<!-- meta data -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap 3 -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap-3.3.5/css/bootstrap.min.css">
+	<!-- my styles -->
+	<link rel="stylesheet" type="text/css" href="lib/nv.d3.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reformat.css">
+	<script type="text/javascript" src="lib/d3.v3.js"></script>
+	<script type="text/javascript" src="lib/nv.d3.min.js"></script>
+
+</head>
+
+<body>
+	<div id="wrapper" class="container-fluid">
+		<!-- Navbar content -->
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+			    	
+			    <img id="logo" class="pull-left" src="assets/monkey.png">
+			    <a class="navbar-brand" href="#">Fitness Monkey</a>
+			    
+			  </div>
+
+			  <div class="navbar-right">
+			  	<button  type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#workout-modal" id="log-workout-btn" type="button" class="btn navbar-btn btn-success">
+					<span class="glyphicon glyphicon-plus"></span> workout
+				</button>
+				<button id="log-relapse-btn" type="button" class="btn navbar-btn btn-danger" data-toggle="modal" data-target="#relapse-modal">
+					<span class="glyphicon glyphicon-minus"></span> relapse
+				</button>	
+			  </div>
+		</nav>
+
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-sm-3">
+					<h3>Relapse-meter</h3>
+					<div id="relapse-div">							
+						<p id="relapse-meter" class="text-center">2.9</p>
+					</div>
+					
+				</div>
+
+				<div class="col-sm-3">
+					<div id="fitness-challenge">
+						<h3 class="text-center">Daily Fitness Challenge</h3>
+						<img class="teal-border" src="assets/woman_jogging.jpg">			
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="stats">
+						<ul class="list-unstyled nav-justified">
+							<li>
+								<h3>Days Clean</h3>
+								<p id="clean-time">31</p>
+							</li>
+							<li>
+								<h3>Days Since Last Workout</h3>
+								<p id="last-workout">3</p>
+							</li>
+							<li>
+								<h3>Workout Days in a Row</h3>
+								<p id="total-workouts">7</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-sm-3">
+					
+					
+				</div>
+				<div class="col-sm-6">
+				
+				</div>
+
+				<div class="col-sm-3">
+					
+				</div>
+
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-3 col">
+					<div id="workout-log">
+						<div>
+							
+						</div>
+
+						<div class="row text-center">
+						
+							
+							
+						</div>
+					</div>	
+				</div>
+
+				<div class="col-md-6">
+					
+				</div>
+
+				<div class="col-sm-8">
+					<div class="row">
+						
+					</div>
+
+					<div class="row">
+						<div id="workout-line-chart">
+							<button id="zoomIn" class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-minus"></span></button>
+							<button id="zoomOut"class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
+							<h3>Average duration of workouts by week</h3>
+							<svg></svg>
+						</div>
+					</div>
+
+
+					<div class="row chart-couple">
+						<div class="col-xs-6">
+							<div id="workout-donut-chart">
+								<h3>Average urge to relapse by type</h3>
+								<svg></svg>				
+							</div>						
+						</div>
+						<div class="col-xs-6">
+							<div id="workout-bar-chart" >
+								<h3>Average ranking of <u>FUN</u> by category</h3>
+								<svg></svg>				
+							</div>
+						</div>
+					</div>
+
+				</div>
+			
+				
+		</div>
+
+			
+			
+
+		
+	</div>
+
+	<!-- Workout Modal -->
+	<div class="modal fade" id="workout-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  	<div class="modal-dialog" role="document">
+	   		<div class="modal-content">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h3 class="modal-title text-center" id="myModalLabel">Log Your Workout</h3>
+	      		</div>
+	   			<form id="log-workout-form">
+		      		<div class="modal-body">
+			  			<div class="form-group">
+			    			<label for="type-input">What type of workout?</label>
+			    			<input type="text" class="form-control" id="type-input" placeholder="Type of workout">
+			  			</div>
+			  			<div class="form-group">
+			    			<label for="duration-input">What was the duration?</label>
+			    			<input type="number" class="form-control" id="duration-input" placeholder="duration in minutes" min="0">
+			  			</div>
+			  			<div class="form-group">
+			    			<label for="intensity-input">What was the intensity</label>
+			    			<input type="number" class="form-control" id="intensity-input" placeholder="rate the intensity level 1 - 9" min="1" max="9">
+			  			</div>					  	
+			  			<div class="form-group">
+			    			<label for="relapse-input">Rate your urge to relapse</label>
+			    			<input type="number" class="form-control" id="relapse-input" placeholder="rate your urge to relapse 1 - 9" min="1" max="9">
+			  			</div>					  	
+			  			<div class="form-group">
+			    			<label for="fun-factor-input">Rate the fun factor</label>
+			    			<input type="number" class="form-control" id="fun-factor-input" placeholder="How fun was this workout 1 - 9" min="1" max="9">
+			  			</div>
+		      		</div>
+		     		<div class="modal-footer">
+		        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button data-dismiss="modal" type="button" class="btn btn-success">Submit</button>
+		     		</div>
+	     		</form>
+	    	</div><!-- modal content -->
+	  	</div>
+	</div><!-- Modal -->	
+
+	<!-- Relapse Modal -->
+	<div class="modal fade" id="relapse-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  	<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      		<div class="modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h3 class="modal-title text-center" id="myModalLabel" >Log Relapse</h3>
+	      		</div>
+	      		<div class="modal-body">
+	        		<form id="log-relapse-form">
+			  			<div class="form-group">
+			    			<label for="substance-input">What substance?</label><br>
+			    			<label class="radio-inline">
+							<input type="radio" name="substance-type" value="alcohol">
+							Alcohol
+							</label>
+							<label class="radio-inline">
+					  		<input type="radio" name="substance-type" value="drugs">
+					  		Drugs
+							</label>
+							<label class="radio-inline">
+					  		<input type="radio" name="substance-type" value="other">
+					  		Other
+							</label>
+			  			</div>
+					  	<div class="form-group">
+					    	<label for="duration-input">Where were you?</label>
+					    	<input type="text" class="form-control" id="location-input" placeholder="enter location of relapse" min="0">
+					  	</div>
+					  	<div class="form-group">
+					    	<label for="associations-input">Who were you with?</label><br>
+					    	<label class="radio-inline">
+								<input type="radio" name="association-type" value="friends">
+								Friends
+							</label>
+							<label class="radio-inline">
+							  	<input type="radio" name="association-type" value="family">
+							  	Family
+							</label>
+							<label class="radio-inline">
+							  	<input type="radio" name="association-type" value="alone">
+							  	Alone
+							</label>
+					  	</div>					  	
+					  	<div class="form-group">
+					    	<label for="emotion-input">What emotions were you experiencing?</label><br>
+					    	<label class="radio-inline">
+								<input type="radio" name="emotion-type" value="hurt">
+								Hurt
+							</label>
+							<label class="radio-inline">
+							  	<input type="radio" name="emotion-type" value="angry">
+							  	Angry
+							</label>
+							<label class="radio-inline">
+							  	<input type="radio" name="emotion-type" value="lonely">
+							  	Lonely
+							</label>
+							<label class="radio-inline">
+							  	<input type="radio" name="emotion-type" value="tired">
+							  	Tired
+							</label>
+							<label class="radio-inline">
+							  	<input type="radio" name="emotion-type" value="other">
+							  	Other
+							</label>
+					  	</div>		
+
+					  	<label for="emotion-input">Attitude moving forward?</label><br>			  	
+					  	<div class="radio">
+						  	<label>
+						    	<input type="radio" name="attitude-type" value="positive" >
+						    	Positive
+						  	</label>
+						</div>
+						<div class="radio">
+						  	<label>
+						    	<input type="radio" name="attitude-type" value="angry">
+						    	Angry
+						  	</label>
+						</div>
+						<div class="radio">
+						  	<label>
+						    	<input type="radio" name="attitude-type" value="depressed">
+						    	Depressed
+						  	</label>
+						</div>
+						<div class="radio">
+							<label>
+							<input type="radio" name="attitude-type" value="determined">
+								Determined
+							</label>
+						</div>
+	   	 			</div>
+	    			<div class="modal-footer">
+	        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        			<button data-dismiss="modal" type="button" class="btn btn-primary">Log Relapse</button>
+	    			</div>
+				</form>
+	    	</div>
+	  	</div>
+	</div>
+</div>
+
+	<script type="text/javascript">
+
+	</script>
+
+
+
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/holderJS_lite/lib/holder.min.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/working_copy_d3.js"></script>
+</body>
