@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+	<title>Fitness Monkey Site</title>
+	<!-- meta data -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- bootstrap 3 -->
+	<link rel="stylesheet" type="text/css" href="../bootstrap/bootstrap-3.3.5/css/bootstrap.min.css">
+	<!-- my styles -->
+	<link rel="stylesheet" type="text/css" href="../lib/nv.d3.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/working_copy.css"> -->
+	<script type="text/javascript" src="../lib/d3.v3.js"></script>
+	<script type="text/javascript" src="../lib/nv.d3.min.js"></script>
+	<style type="text/css">
+		#scatter-line-chart svg {
+			width: 100%;
+			height: 400px;
+			background-color: lightgray;
+		}
+
+	</style>
+	<script type="text/javascript" src="../lib/jquery.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Scatter with Line Chart</h1>
+		<div id="scatter-line-chart">
+			<svg></svg>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+		$(function(){
+			var relapseData;
+
+			function loadData(data){
+				relapseData = data.relapses;
+				buildLinePlusBarChart(dataTransformer.typeLinePlusBarChart(data));
+			};
+
+			d3.json('../data/new_workouts.json', loadData);
+
+			function buildLinePlusBarChart(data){
+			var chart;
+		    nv.addGraph(function() {
+		        chart = nv.models.linePlusBarChart()
+		            .margin({top: 50, right: 60, bottom: 30, left: 70})
+		            .legendRightAxisHint(' [Using Right Axis]')
+		            .color(d3.scale.category10().range());
+
+		        chart.xAxis.tickFormat(function(d) {
+		                return d3.time.format('%x')(new Date(d))
+		            })
+		            .showMaxMin(false);
+
+		        // chart.y1Axis.tickFormat(function(d) { return '$' + d3.format(',f')(d) });
+		        chart.bars.forceY([0]).padData(false);
+
+		        chart.x2Axis.tickFormat(function(d) {
+		            return d3.time.format('%x')(new Date(d))
+		        }).showMaxMin(false);
+
+		        chart.focusEnable(false);
+		        
+		        d3.select('#chart1 svg')
+		            .datum(testdata)
+		            .transition().duration(500).call(chart);
+
+		        nv.utils.windowResize(chart.update);
+
+		        chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+		        return chart;
+		    });
+		};
+
+			var dataTransformer = {
+				typeLinePlusBarChart: function(data){
+					var results = [];
+					data.forEach(function(relapse){
+						results.push({
+							series: relapse.substance,
+							x: new Date(relapse.date).getTime(),
+							y: 50,
+							shape: 'circle',
+							size: 5
+						})
+					})
+					return [{
+						color: 'red',
+						intercept: 50,
+						key: 'relapse',
+						slope: Math.random() - .01,
+						values: results
+					}];
+				}
+			}
+
+
+			
+		})
+	</script>
+
+
+
+	<script type="text/javascript" src="../bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../lib/holderJS_lite/lib/holder.min.js"></script>
+	<script type="text/javascript" src="../scripts/script.js"></script>
+	<script type="text/javascript" src="../scripts/working_copy_d3.js"></script>
+</body>

@@ -17,56 +17,85 @@
 <body>
 	<div id="wrapper" class="container-fluid">
 		<!-- Navbar content -->
-		<nav class="navbar navbar-inverse">
+		<nav class="my-navbar navbar navbar-inverse">
 			<div class="container-fluid">
 			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    	
-			    <img id="logo" class="pull-left" src="assets/monkey.png">
-			    <a class="navbar-brand" href="#">Fitness Monkey</a>
-			    
-			  </div>
+				<div class="navbar-header">
+				  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+	        		<span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+	      			</button>
+				    	
+				    <img id="logo" class="pull-left" src="assets/monkey.png">
+				    <a  id="logo-brand" class="navbar-brand" href="index.html">Fitness Monkey</a>
+				</div>
 
-			  <div class="navbar-right">
-			  	<button  type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#workout-modal" id="log-workout-btn" type="button" class="btn navbar-btn btn-success">
-					<span class="glyphicon glyphicon-plus"></span> workout
-				</button>
-				<button id="log-relapse-btn" type="button" class="btn navbar-btn btn-danger pull-right" data-toggle="modal" data-target="#relapse-modal">
-					<span class="glyphicon glyphicon-minus"></span> relapse
-				</button>	
-			  </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      
+			      <ul class="nav navbar-nav navbar-right">
+					<li class="visible-xs text-center">
+						<a href="#charts">View Charts</a>
+					</li>
+					<li class="visible-xs text-center">
+						<a href="#fitness-challenge">Daily Fitness Challenge</a>
+					</li>
+			        <li>
+			        	<button  type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#workout-modal" id="log-workout-btn" type="button" class="btn navbar-btn btn-success">
+							<span class="glyphicon glyphicon-plus"></span> workout
+						</button>
+						<button id="log-relapse-btn" type="button" class="btn navbar-btn btn-danger pull-right" data-toggle="modal" data-target="#relapse-modal">
+						<span class="glyphicon glyphicon-minus"></span> relapse
+						</button>	
+					</li>
+			        
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
 		</nav>
 
 		<div class="container-fluid">
+			<div class="row text-center visible-xs box">
+				<h3>Relapse-meter</h3>
+				<p class="relapse-meter">2.9</p>
+			</div>
 			
 			<div class="row">
 
 				<div class="col-sm-8">
 					<div class="row">
-						<div class="stats">
-							<ul class="list-unstyled list-horizontal nav-justified">
-								<li>
-									<h3>Days Clean</h3>
-									<p id="clean-time">31</p>
-								</li>
-								<li>
-									<h3>Days Since Last Workout</h3>
-									<p id="last-workout">3</p>
-								</li>
-								<li>
-									<h3>Workout Days in a Row</h3>
-									<p id="total-workouts">7</p>
-								</li>
-							</ul>
+						<div class="col-xs-12">
+							<div class="stats">
+								<ul class="text-center list-unstyled list-horizontal nav-justified">
+									<li>
+										<h3>Days Clean</h3>
+										<p id="clean-time">31</p>
+									</li>
+									<li>
+										<h3>Days Since Last Workout</h3>
+										<p id="last-workout">3</p>
+									</li>
+									<li>
+										<h3>Workout Days in a Row</h3>
+										<p id="total-workouts">7</p>
+									</li>
+								</ul>
+							</div>
+
 						</div>
 					</div>
 
 					<div class="row">
-						<div id="workout-line-chart">
-							<button id="zoomIn" class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-minus"></span></button>
-							<button id="zoomOut"class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
-							<h3>Average duration of workouts by week</h3>
-							<svg></svg>
+						<div class="col-xs-12">
+							<div id="workout-line-chart">
+								<button id="weekly" class="pull-right btn btn-success btn-sm">Weekly</button>
+								<button id="daily" class="pull-right btn btn-success btn-sm">Daily</button>
+								<button id="scroll-right" class="pull-right btn btn-sm"><span class="glyphicon glyphicon-chevron-right"></span></button>
+								<button id="scroll-left" class="pull-right btn btn-sm"><span class="glyphicon glyphicon-chevron-left"></span></button>
+								<h3>Average duration of workouts by day/week</h3>
+								<svg></svg>
+							</div>
 						</div>
 					</div>
 
@@ -80,7 +109,7 @@
 						</div>
 						<div class="col-xs-6">
 							<div id="workout-bar-chart" >
-								<h3>Average ranking of <u>FUN</u> by category</h3>
+								<h3>Favorites</h3>
 								<svg></svg>				
 							</div>
 						</div>
@@ -90,22 +119,36 @@
 			
 				<div class="col-sm-4 col">
 					<div id="workout-log">
-						<div class="row">
+						<div class="row text-center hidden-xs box">
 							<h3>Relapse-meter</h3>
-							<div id="relapse-div">
-								<p id="relapse-meter" class="text-center">2.9</p>
-							</div>
+							<p class="relapse-meter">2.9</p>							
 						</div>
 
-						<div class="row text-center">
-							
-							
-							<div id="fitness-challenge">
-								<h3 class="text-center">Daily Fitness Challenge</h3>
-								<img class="teal-border" src="assets/woman_jogging.jpg">			
+						<div class="row">
+							<div class="col-xs-12">
+								<div id="greet-user">
+									<h3 id="one"><span class="glyphicon glyphicon-user"></span> <span id="member-name"></span></h3>
+									<p id="two">Congratulations on 22 days clean.</p>
+									<p id="three">You're relapse-meter is in the yellow, so take some time for self-care.</p>
+									<p id="four">It's been 7 days since your last workout, but no worries. </p>
+									<p id="five">Take the Daily Fitness Challenge. It will get you in gear!</p>
+									<div class="text-center" id="fitness-challenge">
+										<h3>Daily Fitness Challenge</h3>
+										<img class="img-respnonsive img-circle" src="assets/woman_jogging.jpg"><br>
+										<button id="fitness-challenge-button" class="btn btn-block btn-success">Take the Challenge</button>
+									</div>
+								</div>
+
+
 							</div>
+							
 						</div>
+		
+						
 					</div>	
+					
+					
+
 				</div><!-- .col-sm-4 -->
 
 			</div><!-- row -->	
@@ -255,15 +298,15 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
 
-	</script>
+
 
 
 
 	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="lib/holderJS_lite/lib/holder.min.js"></script>
+	<script type="text/javascript" src="lib/moment.min.js"></script>
 	<script type="text/javascript" src="scripts/script.js"></script>
 	<script type="text/javascript" src="scripts/working_copy_d3.js"></script>
 </body>

@@ -2,27 +2,27 @@
 		{
 			"date": "10/15/2015",
 			"type": "running",
-			"duration": 30,
+			"duration": 10,
 			"intensity": 5,
-			"urge_to_relapse":1,
+			"urge_to_relapse": 9,
 			"fun_factor": 4,
 			"category": "cardio"
 		},
 		{
 			"date": "10/16/2015",
 			"type": "yoga",
-			"duration": 60,
+			"duration": 15,
 			"intensity": 3,
-			"urge_to_relapse": 3,
+			"urge_to_relapse": 7,
 			"fun_factor": 5,
 			"category": "strength"
 		},			
 		{
 			"date": "10/17/2015",
 			"type": "tennis",
-			"duration": 90,
+			"duration": 45,
 			"intensity": 9,
-			"urge_to_relapse": 3,
+			"urge_to_relapse": 6,
 			"fun_factor": 7,
 			"category": "sports"
 		},
@@ -31,7 +31,7 @@
 			"type": null,
 			"duration": 0,
 			"intensity": null,
-			"urge_to_relapse": 6,
+			"urge_to_relapse": 9,
 			"fun_factor": null,
 			"category": "cardio"
 		},
@@ -40,7 +40,7 @@
 			"type": "weight training",
 			"duration": 35,
 			"intensity": 8,
-			"urge_to_relapse": 2,
+			"urge_to_relapse": 6,
 			"fun_factor": 5,
 			"category": "strength"			
 		},
@@ -49,7 +49,7 @@
 			"type": "soccer",			
 			"duration": 45,
 			"intensity": 9,
-			"urge_to_relapse": 3,
+			"urge_to_relapse": 7,
 			"fun_factor": 6,
 			"category": "sports"
 		},
@@ -58,7 +58,7 @@
 			"type": "running",
 			"duration": 35,
 			"intensity": 9,
-			"urge_to_relapse":4,
+			"urge_to_relapse": 5,
 			"fun_factor": 5,
 			"category": "cardio"
 		},
@@ -67,7 +67,7 @@
 			"type": null,
 			"duration": 0,
 			"intensity": null,
-			"urge_to_relapse":7,
+			"urge_to_relapse": 9,
 			"fun_factor": null,
 			"category": "strength"
 		},
@@ -76,7 +76,7 @@
 			"type": "tennis",
 			"duration": 55,
 			"intensity": 7,
-			"urge_to_relapse": 2,
+			"urge_to_relapse": 6,
 			"fun_factor": 7,
 			"category": "sports"
 		},
@@ -85,7 +85,7 @@
 			"type": "running",
 			"duration": 50,
 			"intensity": 6,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 4,
 			"fun_factor": 9,
 			"category": "cardio"
 		},
@@ -94,16 +94,16 @@
 			"type": "squats",
 			"duration": 120,
 			"intensity": 8,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 6,
 			"fun_factor": 8,
 			"category": "strength"
 		},
 		{
 			"date": "10/26/2015",
 			"type": "yoga",
-			"duration": 75,
+			"duration": 40,
 			"intensity": 7,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 6,
 			"fun_factor": 8,
 			"category": "sports"
 		},
@@ -112,7 +112,7 @@
 			"type": null,
 			"duration": 0,
 			"intensity": null,
-			"urge_to_relapse": 7,
+			"urge_to_relapse": 8,
 			"fun_factor": null,
 			"category": "cardio"
 		},
@@ -128,9 +128,9 @@
 		{
 			"date": "10/29/2015",
 			"type": "tennis",
-			"duration": 90,
+			"duration": 60,
 			"intensity": 9,
-			"urge_to_relapse": 3,
+			"urge_to_relapse": 5,
 			"fun_factor": 8,
 			"category": "sports"
 		},
@@ -139,7 +139,7 @@
 			"type": "running",
 			"duration": 50,
 			"intensity": 8,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 4,
 			"fun_factor": 7,
 			"category": "cardio"
 		},
@@ -148,7 +148,7 @@
 			"type": "weight training",
 			"duration": 60,
 			"intensity": 9,
-			"urge_to_relapse": 2,
+			"urge_to_relapse": 4,
 			"fun_factor": 6,
 			"category": "strength"
 		},
@@ -159,14 +159,15 @@
 			"intensity": null,
 			"urge_to_relapse": 8,
 			"fun_factor": null,
-			"category": "sports"
+			"category": "sports",
+			"relapse": true
 		},
 		{
 			"date": "11/2/2015",
 			"type": "running",
 			"duration": 40,
 			"intensity": 9,
-			"urge_to_relapse": 3,
+			"urge_to_relapse": 5,
 			"fun_factor": 7,
 			"category": "cardio"
 		},
@@ -177,14 +178,16 @@
 			"intensity": null,
 			"urge_to_relapse": 7,
 			"fun_factor": null,
-			"category": "strength"
+			"category": "strength",
+			"relapse": true
+
 		},
 		{
 			"date": "11/4/2015",
 			"type": "tennis",
 			"duration": 65,
 			"intensity": 7,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 3,
 			"fun_factor": 8,
 			"category": "sports"
 		},
@@ -202,7 +205,7 @@
 			"type": "weight training",
 			"duration": 25,
 			"intensity": 8,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 4,
 			"fun_factor": 7,
 			"category": "strength"
 		},
@@ -211,7 +214,7 @@
 			"type": "handball",
 			"duration": 75,
 			"intensity": 8,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 3,
 			"fun_factor": 9,
 			"category": "sports"
 		},
@@ -238,7 +241,7 @@
 			"type": "soccer",
 			"duration": 90,
 			"intensity": 8,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 2,
 			"fun_factor": 9,
 			"category": "sports"
 		},
@@ -247,7 +250,7 @@
 			"type": "running",
 			"duration": 40,
 			"intensity": 9,
-			"urge_to_relapse": 2,
+			"urge_to_relapse": 4,
 			"fun_factor": 7,
 			"category": "cardio"
 		},
@@ -265,7 +268,7 @@
 			"type": "weight training",
 			"duration": 55,
 			"intensity": 7,
-			"urge_to_relapse": 1,
+			"urge_to_relapse": 3,
 			"fun_factor": 5,
 			"category": "sports"
 		},
@@ -313,7 +316,109 @@
 			"urge_to_relapse": 5,
 			"fun_factor": 5,
 			"category": "cardio"
+		},
+
+		{
+			"date": "11/19/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": null,
+			"urge_to_relapse": 7,
+			"fun_factor": null,
+			"category": "cardio"
+		},
+		{
+			"date": "11/20/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": null,
+			"urge_to_relapse": 7,
+			"fun_factor": null,
+			"category": "cardio"
+		},
+		{
+			"date": "11/21/2015",
+			"type": "push-ups",
+			"duration": 30,
+			"intensity": 6,
+			"urge_to_relapse": 4,
+			"fun_factor": 3,
+			"category": "strength"
+		},
+		{
+			"date": "11/22/2015",
+			"type": "tennis",
+			"duration": 35,
+			"intensity": 7,
+			"urge_to_relapse": 6,
+			"fun_factor": 3,
+			"category": "sports"
+		},
+		{
+			"date": "11/23/2015",
+			"type": "running",
+			"duration": 40,
+			"intensity": 5,
+			"urge_to_relapse": 5,
+			"fun_factor": 5,
+			"category": "cardio"
+		},
+
+		{
+			"date": "11/24/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": null,
+			"urge_to_relapse": 7,
+			"fun_factor": null,
+			"category": "cardio"
+		},
+		{
+			"date": "11/25/2015",
+			"type": null,
+			"duration": 0,
+			"intensity": null,
+			"urge_to_relapse": 7,
+			"fun_factor": null,
+			"category": "cardio"
+		},
+		{
+			"date": "11/26/2015",
+			"type": "push-ups",
+			"duration": 30,
+			"intensity": 6,
+			"urge_to_relapse": 4,
+			"fun_factor": 3,
+			"category": "strength"
+		},
+		{
+			"date": "11/27/2015",
+			"type": "tennis",
+			"duration": 35,
+			"intensity": 7,
+			"urge_to_relapse": 6,
+			"fun_factor": 3,
+			"category": "sports"
+		},
+		{
+			"date": "11/28/2015",
+			"type": "running",
+			"duration": 40,
+			"intensity": 5,
+			"urge_to_relapse": 5,
+			"fun_factor": 5,
+			"category": "cardio"
+		},
+		{
+			"date": "11/29/2015",
+			"type": "running",
+			"duration": 40,
+			"intensity": 5,
+			"urge_to_relapse": 5,
+			"fun_factor": 5,
+			"category": "cardio"
 		}
+
 	],
 	"relapses": [
 		{
@@ -331,6 +436,17 @@
 			"associations": "alone",
 			"emotions": "hurt",
 			"attitude": "depressed"
+		}
+	],
+	"challenges": [
+		{
+			"date": "11/23/2015",
+			"age_group": 2,
+			"score": 60
+		},{
+			"date": "11/24/2015",
+			"age_group": 2,
+			"score": 75
 		}
 	]
 }

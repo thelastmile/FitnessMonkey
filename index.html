@@ -10,55 +10,39 @@
 	<link rel="stylesheet" type="text/css" href="lib/nv.d3.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="lib/d3.v3.js"></script>
-	<script type="text/javascript" src="lib/dimple.v2.1.2.min.js"></script>
 	<script type="text/javascript" src="lib/nv.d3.min.js"></script>
 </head>
-
 
 <body>
 	<!-- wrapper for entire page -->
 	<div class="wrapper">
-		<!-- container for first two rows -->
+		<!-- fm-banner container-fluid for first two rows -->
 		<div class="fm-banner container-fluid">
-		<!-- first row landing page-->
+		<!-- first row landing page -->
 		<div class="row">
-			<div class="col-md-12 text-right">
-				<p>This many people have gotten the Monkey off their backs <u><span id="num"> 0</span></u></p>
-			</div>
-		</div>
-
-		<!-- second row landing page -->
-		<div class="row">
+			<h2 class="text-center"><span class="num">100 </span> members have gotten the monkey off of their backs!!</h2>
 			<div class="col-md-8">
+				
 				<div class="row margin-top-45">
 					<div class="col-md-3">
 						<img src="assets/monkey.png" id="monkey1" class="img-responsive">
 					</div>
 					<div class="col-md-9 title-text">
-						<div>
-							<strong>Fitness Monkey</strong> a new kind of Health & Fitness Tracker.
-						</div>
 						<div class="margin-top-20">		
-							Introducing a <strong>Fitness Program</strong><br> for <strong>Addiction Recovery.</strong>
+							<p>Introducing a <strong>Fitness Program</strong><br> for <strong>Addiction Recovery.</strong></p>
+						</div><br>
+						<div>
+							<p><strong>Fitness Monkey:</strong> a Health & Fitness Tracker.</p>
 						</div>
+						
 					</div>
 				</div>
 			</div>
-				
-			<!-- user column app guts -->			
-			<div id="userColumn" class="col-md-4">					
-				<!-- navbar icons (hidden on login page)-->
-				<ul id="navElements" class="nav nav-tabs nav-justified">
-				  	<li id="navHome" title="home" role="presentation"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-				  	<li id="navCardio" title="cardio challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-heart"></span></a></li>
-				  	<li id="navSports" ="sports challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-flag"></span></a></li>
-				  	<li id="navStrength" title="strength challenge" role="presentation"><a href="#"><span class="glyphicon glyphicon-tower"></span></a></li>
-				  	<li id="navRelapse" title="relapse" role="presentation"><a href="#"><span class="glyphicon glyphicon-flash"></span></a></li>
-				  	<li id="navUser" title="edit user info" role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-				</ul>
 
+			<!-- user column app-->			
+			<div id="userColumn" class="col-md-4">			
 				<!-- User signin form -->
-			    <form id="loginPage" class="page form-signin" role="form">
+			    <form id="login-page" class="page form-signin" role="form">
 			      	<h2 class="form-signin-heading">Join the Revolution</h2>
 			      	<div class="form-group">
 			        	<input id="username" type="text" class="form-control" placeholder="USERNAME" required autofocus>
@@ -66,11 +50,11 @@
 			      	<div class="form-group">
 			        	<input id="password" type="password" class="form-control" placeholder="PASSWORD" required>
 			      	</div>
-				        <button id="loginBtn" class="btn btn-success btn-block" type="button">LOGIN</button>
-				        <button id="signupBtn" class="btn btn-primary btn-block" type="button">BECOME A MEMBER</button>
+				        <a href="working_copy.html" id="loginBtn" class="btn btn-success btn-block" type="button">Login</a>
+				        <button id="signupBtn" class="btn btn-primary btn-block" type="submit">Join</button>
 			    </form>
 			    
-			    <!-- Become a member form -->
+			    <!-- Join/Become a member form -->
 			    <form id="memberSignup" class="page" role="form">
 			    	<h2>Membership form</h2>
 					<div class="form-group">
@@ -96,121 +80,81 @@
 					   <button id="submitBtn" type="submit" class="btn btn-success">Login</button>
 				</form>
 
-				<!-- Workout/Recovery Selection Page -->
-				<div id="optionsPage" class="page">
-					<h4 class="text-center">Make your selection</h4>
-					<button id="workoutBtn" class="btn btn-block btn-success">Workout</button>
-					<button id="recoveryBtn" class="btn btn-block btn-info">Recovery</button>
-				</div>
-				
-				<!-- Workout Selection Page -->
-				<div id="workoutPage" class="page">
-					<h4 class="text-center">Select your Workout Challenge</h4 >
-					<button id="cardioBtn" class="btn btn-block btn btn-danger">Cardio</button>
-					<button id="sportBtn" class="btn btn-block btn btn-primary">Sport</button>
-					<button id="strengthBtn" class="btn btn-block btn btn-warning">Strength</button>
-				</div>
-
-				<!-- Recovery Selection Page -->
-				<div id="recoveryPage" class="page">
-					<h4 class="text-center">Recovery Tracker</h4>
-					<button id="setGoalBtn" class="btn btn-block btn-success">Set Goal</button>
-					<img src="assets/monkey.png">
-					<button id="lapseBtn" class="btn btn-block btn-danger">Lapse Log</button>
-				</div>
-
-				<!-- Cardio Workout Page -->
-				<div id="cardioPage" class="page">
-					<h4 class="text-center">Cardio Challenge</h4>
-					<ol>
-						<li>Run 5 miles</li>
-					</ol>
-					<button class="btn btn-block btn-primary doneBtn">Done</button>
-				</div>
-
-				<!-- Sport workout page -->
-				<div id="sportPage" class="page">
-					<h4 class="text-center">Sports Challenge</h4>
-					<p class="lead">Go play soccer with your friends at MacArthur Park.</p>
-					<button class="btn btn-block btn-primary doneBtn">Done</button>
-				</div>
-
-				<!-- strength workout page -->
-				<div id="strengthPage" class="page">
-					<h4 class="text-center">Muscle Challenge</h4>
-					<p class="lead"></p>
-					<ol>
-						<li>50 squats</li>
-						<li>50 pushups</li>
-						<li>20 pull-ups</li>
-					</ol>
-					<button class="btn btn-block btn-primary doneBtn">Done</button>
-				</div>
-
-				<!-- Set goals page -->
-				<div id="setGoalsPage" class="page">
-					<h4 class="text-center">Set Goals Page</h4>
-					<button class="btn btn-primary btn-block goBtn">Go</button>
-				</div>
-
-				<!-- Log relapse page -->
-				<div id="logLapsePage" class="page">
-					<h4 class="text-center">Log Relapse Page</h4>
-					<button class="btn btn-primary btn-block goBtn">Go</button>
-				</div>			
+				<!-- user column app's guts gone from here -->
 
 				<!-- Data Visualization Page -->
 				<div id="visualPage" class="page">
 					<h4 class="text-center">Fitness/Recovery Tracker</h4>
 					<!-- append d3 here -->
-					<div id="d3Page">
+					 <div id="d3Page">
 						<h2>D3 Chart & Buttons</h2>
 					</div>
-				</div>
-			</div><!-- end of user column app guts -->
-		</div><!-- end of second row landing page-->
-		</div><!-- end of container for first two rows -->
+				</div> 
+			</div> <!-- end of userColumn app-->
+			
+		</div><!-- end of first row landing page-->
+		</div><!-- end of fm-banner container-fluid for first two rows -->
 
-		<div class="container margin-top-20">
-			<!-- third row -->
-			<div class="row chartrows">
-				<div class="col-md-6 description-text" >
+		<!-- container margin-top-20 for charts area of landing page-->
+		<div class="container margin-top-20">		
+		
+			<!-- third row of landing page -->
+			<div class="row chartrows margin-top-20">
+				<div class="col-md-5 description-text" >
 					<p>Real-time intertactive charts<br> to monitor goals and achievements.</p>
 				</div>				
 
-				<div class="col-md-6 charts">
-					<img class="img-responsive " src="assets/working_copy.png" alt="">
+				<div class="col-md-7 charts">
+					<img class="img-responsive images" src="assets/dashboard.png" alt="">
 				</div>
-			</div><!-- end of  third row -->
+			</div><!-- end of third row landing page -->
 
-			<!-- forth row -->
-			<div class="row margin-top-20 chartrows">
-				<div class="col-md-6 description-text">
-					<p>Push alerts to warn users<br>and coaches of relapses.</p>
-				</div>				
-
-				<div class="col-md-6 charts">
-					<img class="img-responsive" src="assets/working_copy.png" alt="">
-				</div>
-			</div><!-- end of  forth row -->
-
-
-			<!-- fifth row -->
+			<!-- forth row of landing page-->
 			<div class="row margin-top-20">
-				<div class="col-md-12 description-text">
-					<p>Ipsum olerai poltis amour. Fuctris patris del amour fati.</p>
+				<div class="col-md-5 description-text">
+					<p>Daily fitness challenges,<br>track relapses.</p>
 				</div>				
 
-				</div><!-- end of  fifth row -->
+				<div class="col-md-7 charts">
+					<img class="img-responsive images" src="assets/challenge.png" alt="">
+				</div>
+			</div><!-- end of forth row landing page -->
 
-		</div><!-- en of container -->
+			<!-- fifth row of landing page-->
+			<div class="row margin-top-20">
+				<div class="col-md-5 description-text">
+					<p>Daily fitness challenges,<br>track relapses.</p>
+				</div>				
 
+				<div class="col-md-7 charts">
+					<img class="img-responsive images" src="assets/challenge.png" alt="">
+				</div>
+			</div><!-- end of fifth row landing page -->
+
+
+
+
+
+		</div><!-- end of container margin-top-20 for charts area of landing page -->
+
+			
+
+
+			<div class="row footer text-center margin-top-20">
+				<div class="col-md-12">
+					<small>&copy 2015 Chris Schuhmacher, Jorge Heredia, Joe Demerson, Glenn Padgett.</small>
+				</div>
+			</div>
 	</div><!--end of wrapper for entire page -->	
 					
 	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-	<!-- <script type="text/javascript" src="resources/holderJS_lite/lib/holder.min.js"></script> -->
-	<script type="text/javascript" src="scripts/joeScript.js"></script>
 	<script type="text/javascript" src="scripts/script.js"></script>
-	<script type="text/javascript" src="scripts/myd3.js"></script>
+	<!-- // <script type="text/javascript" src="scripts/working_copy_d3.js"></script> -->
 </body>
+</htm>
+
+
+			
+

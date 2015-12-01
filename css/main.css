@@ -1,24 +1,31 @@
 .fm-banner {
-	padding-bottom:5em;
+	padding-bottom:13em;
 	padding-top:5em;
-	font-face-name:"Proxima Nova";
-	/*background-image: url("../assets/star.jpg");
-	background-repeat: no-repeat;*/
+	font-face-name:"Proxima Nova";	
 	color: floralwhite;
-  	background: linear-gradient(#111630, #2C2C59, #393F5F);	
-  /*background colors #010228, #212143, #55579B*/ /*#111630, #171240, #60647A*/ /*#111630, #0A0A48, #60647A*/
+  	background: linear-gradient(#030925,#232350,#282C3E);
+}
+.col-md-12 p{
+	font-size: 1.4em;
+	font-weight: bold;
 }
 
+.col-md-6 {
+
+	padding: 2em;
+}
+
+.col-md-5 {
+	margin-top: 2em;
+}
+
+
 .margin-top-20 {
-	margin-top:20px;
+	margin-top:50px;
 }
 
 .margin-top-45 {
-	margin-top:4.5em;
-}
-
-.text-right {
-	font-size: 1.5em;
+	margin-top:6.5em;
 }
 
 .title-text {
@@ -29,46 +36,30 @@
 	display: none;
 }
 
-a {
-	color: white;
-	font-size: 0.9em;
-	
-	padding-right: 13em;
-	margin-top: 2em;	
-}
-
-.description-text p {
-	margin-top: 4.5em;
-  font-size: 1.5em;
-
-}
-
 /* user column styles
 -------------------------------------*/
 /*joint the revolution section*/
 .form-signin-heading {
 	margin-top: 2em;
-
 }
+
 
 #username {
 	width: 23em;
 	margin-top: 1em;
 	border: none;
+	color:floralwhite;
 	border-bottom: 1px solid white;	 
 	background-color: rgba(0, 29, 255, 0);
 	border-radius: 0;
 	box-shadow: none;
 }
 
-input::-placeholder {
-	color: white;
-}
-
 #password {
 	width:  23em;
 	margin-top: 2em;
 	border: none;
+	color:floralwhite;
 	border-bottom: 1px solid grey;
 	background-color: rgba(0, 29, 255, 0);
 	border-radius: 0;
@@ -78,34 +69,60 @@ input::-placeholder {
 
 #loginBtn {
 	margin-left: 0;
-	width:  23em;
+	width: 23em;
 	margin-top: 2.5em;
 	margin-bottom: 1.5em;
-	border-color: #00ebd2;
-	color: #00ebd2;
+	color: #19CAD3;
 	background-color: rgba(0, 29, 255, 0);
 	border-radius: 0;
-
+	border-color: #00ebd2;
 }
+
 
 #signupBtn {
 	margin-left: 0;
-	width:  23em;
-	border-color: #00ebd2;
+	margin-top: 3em;
+	width: 23em;	
 	color: #00ebd2;
 	background-color: rgba(0, 29, 255, 0);
 	border-radius: 0;
+	border-color: #00ebd2;
 }
 
 /*******************************/
-.chartrows {
-	border-bottom: 1px solid lightgray;/*#00ebd2*/
+/*.chartrows {
+}*/
+
+.charts {	
+	margin-bottom: 20px;	
+	box-shadow: 7px 7px 5px 0px;
+	background: linear-gradient(#030925,#232350,#282C3E);
+	
 }
 
-.charts {
-	margin-bottom: 20px;
-}
+.images {
+	
+	width: 682.5px;
+	height: 488.766px;
+}	
 
+
+
+.description-text p {
+	padding: 1em;
+	margin-top: 4.5em;
+  	font-size: 1.8em;
+  	font-family: sans-serif;
+  	font-style: italic;
+  	font-weight: bold;
+  	box-shadow: 3px 3px 1px 1px;
+  	background:rgba(23,169,212,0.32);
+}
+.col-md-12 p{
+	font-size: 1.4em;
+	font-weight: bold;
+
+}
 /*//////////////////////////////////////////////////////////////////////*/
 	
 /*inside the app guts*/
@@ -174,3 +191,7 @@ circle:hover {
 	color: black;
 }
 
+.footer{
+	color:white;
+	  	background: linear-gradient(#030925,#232350,#282C3E);
+}
