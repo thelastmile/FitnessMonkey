@@ -9,6 +9,18 @@
 	BLUE		- #2867d5
 	AQUA		- #00ebd2
 */
+/* 
+	BLUE		- #1f77b4
+ 	ORANGE		- #ff7f0e
+ 	GREEN		- #2ca02c
+ 	RED			- #d62728
+ 	PURPLE		- #9467bd
+ 	BROWN		- #8c564b
+ 	PINK		- #e377c2
+ 	GRAY		- #7f7f7f
+ 	OLIVE		- #bcbd22
+ 	TEAL 		- #17becf
+ */
 
 @font-face {
 	font-family: 'ProximaNova-Light';
@@ -21,10 +33,11 @@
 }
 
 body{
-	background-image: linear-gradient(#202126, #333352, #2867d5);
-	color: #00ebd2;
+	/*background-image: linear-gradient(#202126, #333352, #2867d5);*/
+	background-color: #ddd;
 	font-family: 'ProximaNova-Light';
 	padding-bottom: 5em;
+	color: black;
 }
 
 .navbar {
@@ -42,6 +55,80 @@ body{
 #logo-brand {
 	font-weight: bold;
 	font-size: 20px;
+}
+
+/* sidebar styles
+--------------------------------------------------------*/
+
+#sidebar {
+	background-color: white;
+	padding-top: 5px;
+	font-size: 1.2em;
+}
+
+#sidebar span {
+	font-weight: bold;
+}
+
+#profile-pic-div {
+	margin-top: 5px;
+}
+
+/* greet user styles
+-----------------------------------------------*/
+
+#relapse-meter {
+	font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 3px;
+    right: 95px;
+}
+
+#my-canvas-element {
+	width: 100%;
+}
+
+/* chart styles
+--------------------------------*/
+.panel {
+	border-radius: 0;
+}
+
+#workout-line-chart,
+#workout-donut-chart,
+#workout-bar-chart,
+#days-clean-div,
+#last-workout-div,
+#workout-days-div,
+#fitness-challenge-div{
+	padding: 5px;
+	background-color: white;
+}
+
+.mid-row {
+	margin-top: 20px;
+}
+
+.stats p {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+#days-clean-div {
+	background-color: #2867d5;
+}
+
+#last-workout-div {
+	background-color: #00ebd2;
+}
+
+#workout-days-div {
+	background-color: #2867d5;
+}
+
+#table-div {
+	background-color: white;
 }
 
 
@@ -63,8 +150,8 @@ body{
 -------------------------------------*/
 
 svg {
-	background-color: #202126;
-	border: 1px solid #00ebd2;
+	/*background-color:  #202126;*/
+	/*border: 1px solid #00ebd2;*/
 	border-radius: .5em;
 }
 
@@ -73,19 +160,24 @@ svg {
 	padding: 0 1em;
 }
 
+.chart-couple {
+	margin-top: 20px;
+}
+
 .chart-couple svg {
 	height: 275px;
 }
 
 text {
 	stroke-width: 1;
-	stroke: #00ebd2;
+	/*stroke: #00ebd2;*/
 }
 
 #workout-line-chart button {
 	margin-right: .5em;
 	outline: none;
-	color: #00ebd2;
+	color: white;
+	font-size: 1em;
 	background-color: #2867d5;
 }
 
@@ -97,49 +189,12 @@ text {
 	stroke: none;
 }
 
-/* typography styles
----------------------------------------*/
+/* form styles
+------------------------------------*/
 
-.stats li {
-	border-bottom: 1px solid #00ebd2;
-	border-left: 1px solid #00ebd2;
-	border-radius: .2em;
-	font-size: 4em;
-	font-weight: 900;
+.radio-inline {
+	margin: 0 10px;
 }
-
-.relapse-meter {
-	background-color: #202126;
-	width: 60%;
-	margin: 0 auto;
-	font-size: 4em;
-	font-weight: bold;
-	padding: 1em;
-	border: 1px solid #00ebd2;
-	border-radius: 50%;
-}
-
-
-/* greet user styles
------------------------------------------------*/
-#greet-user {
-	background-color:  #202126;
-	border: 1px solid #00ebd2;
-	border-radius: .5em;
-	width: 90%;
-	margin: 10px auto;
-	padding: 15px;
-	font-size: 1.2em;
-	color: #00ebd2;
-	display: none;
-}
-
-#greet-user img {
-	width: 90%;
-	margin: .5em;
-	border: 1px solid #00ebd2;
-}
-
 
 
 /* Modal styles 

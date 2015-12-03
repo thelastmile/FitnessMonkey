@@ -16,145 +16,99 @@
 <body>
 	<!-- wrapper for entire page -->
 	<div class="wrapper">
+		
 		<!-- fm-banner container-fluid for first two rows -->
 		<div class="fm-banner container-fluid">
-		<!-- first row landing page -->
-		<div class="row">
-			<h2 class="text-center"><span class="num">100 </span> members have gotten the monkey off of their backs!!</h2>
-			<div class="col-md-8">
+			<!-- Navbar content -->
+		 	<nav class="my-navbar navbar navbar-inverse">			
+			  	 <!--Brand and toggle get grouped for better mobile display -->
+				 <div class="navbar-header">
+				  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" 	aria-expanded="false">
+		        		<span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+	      			</button>
+				    <img id="logo" class="pull-left" src="assets/fitness_monkey_logo_new.png">
+				    <a id="logo-brand" class="navbar-brand" href="index.html"> Fitness Monkey</a>
+				 </div>
+			</nav>
+				    	
+			<div class="row">
+				<div class="col-md-12 text-center margin-top-45 fitness p">
+					<h1>FITNESS MONKEY</h1>
+					<p>A PERSONAL HEALTH & RECOVERY TRACKER</p>
+				</div>
+			</div> <!-- row1 -->
+			
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<a href="working_copy.html"><button type="button" class="btn btn-primary btn-lg">TRY OUR DEMO</button></a>
+				</div>
+			</div> <!-- row2 -->			
+		</div> <!-- end of fm-banner container-fluid-->
 				
-				<div class="row margin-top-45">
-					<div class="col-md-3">
-						<img src="assets/monkey.png" id="monkey1" class="img-responsive">
-					</div>
-					<div class="col-md-9 title-text">
-						<div class="margin-top-20">		
-							<p>Introducing a <strong>Fitness Program</strong><br> for <strong>Addiction Recovery.</strong></p>
-						</div><br>
-						<div>
-							<p><strong>Fitness Monkey:</strong> a Health & Fitness Tracker.</p>
-						</div>
-						
-					</div>
+			<!-- members numbers -->
+			<div class="row">
+				<div class="col-md-12 members">
+					<h4 class="text-center"><span class="num">1 </span> RUNNING TOWARDS RECOVERY</h4>
 				</div>
 			</div>
 
-			<!-- user column app-->			
-			<div id="userColumn" class="col-md-4">			
-				<!-- User signin form -->
-        <a href="working_copy.html">Sign In</a>
-			    <form id="login-page" class="page form-signin" role="form">
-			      	<h2 class="form-signin-heading">Join the Revolution</h2>
-			      	<div class="form-group">
-			        	<input id="username" type="text" class="form-control" placeholder="USERNAME" required autofocus>
-			      	</div>
-			      	<div class="form-group">
-			        	<input id="password" type="password" class="form-control" placeholder="PASSWORD" required>
-			      	</div>
-				        <a href="working_copy.html" id="loginBtn" class="btn btn-success btn-block" type="button">Login</a>
-				        <button id="signupBtn" class="btn btn-primary btn-block" type="submit">Join</button>
-			    </form>
-			    
-			    <!-- Join/Become a member form -->
-			    <form id="memberSignup" class="page" role="form">
-			    	<h2>Membership form</h2>
-					<div class="form-group">
-					    <label for="inputUsername">Select Username</label>
-					    <input type="text" class="form-control" id="inputUsername" placeholder="select a username">
-					</div>
-					<div class="form-group">
-					    <label for="inputPassword1">Password</label>
-					    <input type="password" class="form-control" id="inputPassword1" placeholder="select a password">
-					</div>				
-					<div class="form-group">
-					    <label for="inputPassword2">Reenter your password</label>
-					    <input type="password" class="form-control" id="inputPassword2" placeholder="reenter a password">
-					</div>
-					 <div class="form-group">
-	    				<label for="inputEmail">Enter your email address</label>
-	    				<input type="email" class="form-control" id="InputEmail" placeholder="email">
-	  				</div>
-					<div class="form-group">
-					    <label for="exampleInputFile">Provide a profile pic</label>
-					    <input type="file" id="exampleInputFile">
-					</div>
-					   <button id="submitBtn" type="submit" class="btn btn-success">Login</button>
-				</form>
-
-				<!-- user column app's guts gone from here -->
-
-				<!-- Data Visualization Page -->
-				<div id="visualPage" class="page">
-					<h4 class="text-center">Fitness/Recovery Tracker</h4>
-					<!-- append d3 here -->
-					 <div id="d3Page">
-						<h2>D3 Chart & Buttons</h2>
-					</div>
-				</div> 
-			</div> <!-- end of userColumn app-->
-			
-		</div><!-- end of first row landing page-->
-		</div><!-- end of fm-banner container-fluid for first two rows -->
-
-		<!-- container margin-top-20 for charts area of landing page-->
-		<div class="container margin-top-20">		
-		
-			<!-- third row of landing page -->
-			<div class="row chartrows margin-top-20">
-				<div class="col-md-5 description-text" >
-					<p>Real-time intertactive charts<br> to monitor goals and achievements.</p>
-				</div>				
-
-				<div class="col-md-7 charts">
-					<img class="img-responsive images" src="assets/dashboard.png" alt="">
+			<!-- features section -->
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h2>TOP FEATURES</h2>
 				</div>
-			</div><!-- end of third row landing page -->
+			</div>
 
-			<!-- forth row of landing page-->
-			<div class="row margin-top-20">
-				<div class="col-md-5 description-text">
-					<p>Daily fitness challenges,<br>track relapses.</p>
-				</div>				
-
-				<div class="col-md-7 charts">
-					<img class="img-responsive images" src="assets/challenge.png" alt="">
+			<div class="row text-center">
+				<div class="col-md-4 margin-top-20 description-graphs p">
+					<span>REAL-TIME CHARTS</span>
+					<p>Monitor goals and achievements<br>while staying fit.</p>
+					<img class="images" src="assets/working_copy.png">
 				</div>
-			</div><!-- end of forth row landing page -->
 
-			<!-- fifth row of landing page-->
-			<div class="row margin-top-20">
-				<div class="col-md-5 description-text">
-					<p>Daily fitness challenges,<br>track relapses.</p>
-				</div>				
-
-				<div class="col-md-7 charts">
-					<img class="img-responsive images" src="assets/challenge.png" alt="">
+				<div class="col-md-4 margin-top-20">
+					<span>AVERAGE GRAPHIC</span>
+					<p>Track average workout intensity while<br>recieving rewards.</p>
+					<img class="images" src="assets/relapse.png">
 				</div>
-			</div><!-- end of fifth row landing page -->
 
+				<div class="col-md-4 margin-top-20">
+					<span>DAILY CHALLENGE</span>
+					<p>Take the Daily Fitness Challenge,<br> and measure up.</p>
+					<img class="images" src="assets/medium_yoga.jpg">
+				</div>
+			</div>
 
-
-
-
-		</div><!-- end of container margin-top-20 for charts area of landing page -->
-
-			
-
-
-			<div class="row footer text-center margin-top-20">
+			<!-- footer -->
+			<div class="row footer text-center">
 				<div class="col-md-12">
+					<h3>START TAKING CHARGE OF YOUR HEALTH TODAY!</h3>
+					<p>Progress at a Glance: Real-time interactive charts
+						monitor goals & achievements</p>
 					<small>&copy 2015 Chris Schuhmacher, Jorge Heredia, Joe Demerson, Glenn Padgett.</small>
 				</div>
-			</div>
-	</div><!--end of wrapper for entire page -->	
-					
+			</div> <!-- end of footer-->
+	</div> <!--end of wrapper for entire page -->	
+
 	<script type="text/javascript" src="lib/jquery.js"></script>
 	<script type="text/javascript" src="lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="scripts/script.js"></script>
-	<!-- // <script type="text/javascript" src="scripts/working_copy_d3.js"></script> -->
+	<!--  <script type="text/javascript" src="scripts/working_copy_d3.js"></script> -->
 </body>
 </htm>
+	
+	
+					
+
+
+
+		
+
+
 
 
 			

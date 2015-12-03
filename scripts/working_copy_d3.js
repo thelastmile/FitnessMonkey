@@ -13,14 +13,14 @@ $(function() {
 	};
 
 	function updateCharts(){
-		$('#last-workout').text(updateLastOccurrence(workoutData));
-		$('#clean-time').text(updateLastOccurrence(relapseData));
-		$('#total-workouts').text(consecutiveWorkoutDays(workoutData));
+		$('.last-workout').text(updateLastOccurrence(workoutData));
+		$('.clean-time').text(updateLastOccurrence(relapseData));
+		$('.total-workouts').text(consecutiveWorkoutDays(workoutData));
 		updateRelapseMeter(relapseRisk(workoutData));
 		mapRelapses(relapseData, workoutData);
 		buildDonutChart(dataTransformer.typeDonutChart(workoutData), "FitMo", "#workout-donut-chart svg");
 		buildBarChart(dataTransformer.typeBarChart(workoutData), "Workouts by Type", "#workout-bar-chart svg");
-		buildLineChart(dataTransformer.typeLineChart(workoutData), "Workouts by Duration", "#workout-line-chart svg");
+		buildLineChart(dataTransformer.typeLineChart(workoutData), "Workouts by Duration (min)", "#workout-line-chart svg");
 	};
 
 	d3.json('../data/new_workouts_two.json', loadDataRenderCharts);
@@ -48,7 +48,7 @@ $(function() {
 	        });
 
 	        chart.yAxis
-	            .axisLabel('Duration of Workouts (min)')
+	            .axisLabel(title)
 	            .tickFormat(d3.format(',.0f'));
 
 	        d3.select('#workout-line-chart svg')
@@ -62,9 +62,6 @@ $(function() {
 
 	        nv.utils.windowResize(resizeChart);
 
-	        d3.select('#zoomIn').on('click', zoomIn);
-	        d3.select('#zoomOut').on('click', zoomOut);
-
 	        function setChartViewBox() {
 	            var w = width * zoom,
 	                h = height * zoom;
@@ -73,21 +70,10 @@ $(function() {
 	                .width(w)
 	                .height(h);
 
-	            d3.select('#workout-line-chart svg')
+	            d3.select(selector)
 	                .attr('viewBox', '0 0 ' + w + ' ' + h)
 	                .transition().duration(1200)
 	                .call(chart);
-	        }
-
-	        function zoomOut() {
-	            zoom += .25;
-	            setChartViewBox();
-	        }
-
-	        function zoomIn() {
-	            if (zoom <= .5) return;
-	            zoom -= .25;
-	            setChartViewBox();
 	        }
 
 	        // This resize simply sets the SVG's dimensions, without a need to recall the chart code
@@ -111,9 +97,86 @@ $(function() {
 	            }
 	        }
 	        d3.selectAll('text').style({'font-family': 'ProximaNova-Light', 'fill': '#00ebd2'});
+
+
     		return chart;
 		});
 	};
+
+	function buildLineChartByWeek(data, title, selector){
+
+		nv.addGraph(function() {
+	        var chart = nv.models.lineChart();
+	        var fitScreen = false;
+	        var width = 900;
+	        var height = 200;
+	        var zoom = 1;
+
+	        chart.useInteractiveGuideline(true);
+
+	        chart.xAxis
+	        	.axisLabel('Workouts by week of the year')
+                .tickFormat(d3.format(',.0f'));
+	      
+	        chart.lines.dispatch.on("elementClick", function(evt) {
+	            console.log(evt);
+	        });
+
+	        chart.yAxis
+	            .axisLabel('Duration of Workouts (min)')
+	            .tickFormat(d3.format(',.0f'));
+
+	        d3.select('#workout-line-chart svg')
+	            .attr('perserveAspectRatio', 'xMinYMid')
+	            .attr('width', width)
+	            .attr('height', height)
+	            .datum(data);
+
+			setChartViewBox();
+			//resizeChart();
+
+	        //nv.utils.windowResize(resizeChart);
+
+   
+	        function setChartViewBox() {
+	            var w = width * zoom,
+	                h = height * zoom;
+
+	            chart
+	                .width(w)
+	                .height(h);
+
+	            d3.select('#workout-line-chart svg')
+	                .attr('viewBox', '0 0 ' + w + ' ' + h)
+	                .transition().duration(1200)
+	                .call(chart);
+	        }
+
+	        // This resize simply sets the SVG's dimensions, without a need to recall the chart code
+	        // Resizing because of the viewbox and perserveAspectRatio settings
+	        // This scales the interior of the chart unlike the above
+	        function resizeChart() {
+	            var container = d3.select('#workout-line-chart');
+	            var svg = container.select('svg');
+
+	            if (fitScreen) {
+	                // resize based on container's width AND HEIGHT
+	                var windowSize = nv.utils.windowSize();
+	                svg.attr("width", windowSize.width);
+	                svg.attr("height", windowSize.height);
+	            } else {
+	                // resize based on container's width
+	                var aspect = chart.width() / chart.height();
+	                var targetWidth = parseInt(container.style('width'));
+	                svg.attr("width", targetWidth);
+	                svg.attr("height", Math.round(targetWidth / aspect));
+	            }
+	        }
+	        d3.selectAll('text').style({'font-family': 'ProximaNova-Light', 'fill': '#00ebd2'});
+
+    		return chart;
+		});
+	}
 
 	function buildDonutChart(data, title, selector){
 
@@ -175,35 +238,47 @@ $(function() {
 		});
 	};
 
-	$('#weekly').on('click', function(){
-		console.log(dataTransformer.lineByWeeks(workoutData));
-
-	})
-
 	var dataTransformer = {
-		lineByWeeks: function(data){
+		typeLineByWeeks: function(data){
 			var dataObj = {};
+			var objStorage = [];
+			var relapseZoneStorage = [];
 
 			data.forEach(function(obj){
 				var prop = obj.week;
-				console.log(prop)
-			})
+				if(dataObj[prop]){
+					dataObj[prop] += obj.duration
+				} else {
+					dataObj[prop] = obj.duration;
+				}
+			});
+			for(var key in dataObj){
+				objStorage.push({x: key, y: dataObj[key]});
+				relapseZoneStorage.push({x: key, y: 160});
+			}
+
+			return [
+				{
+					values: objStorage,
+					key: 'Duration of workouts by week',
+					color: "#00ebd2"
+				},
+				{
+					values: relapseZoneStorage,
+					key: 'Relapse Zone',
+					color: '#c40147'
+				}
+			];
 		},
 		typeLineChart: function(data){
 			var objStorage = [];
 			var relapseZoneStorage = [];
-			var relapseStorage = [];
 
 			var dateNum; 
 			data.forEach(function(item, idx){
 				dateNum = new Date(item.date);
 				objStorage.push({x: dateNum, y: item.duration});
 				relapseZoneStorage.push({x: dateNum, y: 40});
-				if(item.relapse == true){
-					relapseStorage.push({x: dateNum, y: 120});
-				} else {
-					relapseStorage.push({x: dateNum, y: 0});
-				}
 			});
 
 			var results = [
@@ -280,23 +355,12 @@ $(function() {
 		}
 	};
 
-	// logs workout data when modal is closed
-	$('#workout-modal').on('hidden.bs.modal', function(){
-		buildWorkoutObject();
-		updateCharts();
-	});
 
-	// logs relapse data when modal is closed
-	$('#relapse-modal').on('hidden.bs.modal', function(){
-		buildRelapseObject();
-		updateCharts();
-		console.log('relapse submitted')
-	});
 
 	function buildWorkoutObject(){
 		var typeInput = $('#type-input').val();
 		var durationInput = Number($('#duration-input').val());
-		var intensityInput = Number($('#intensity-input').val());
+		var intensityInput = Number($('#intensity[name:checked]').val());
 		var relapseInput = Number($('#relapse-input').val());
 		var funFactorInput = Number($('#fun-factor-input').val());
 		var today = new Date();
@@ -414,13 +478,19 @@ $(function() {
 		})
 	};
 
-	$('#fitness-challenge').on('click', function(e){
-		$('#my-table').toggle('explode');
-	})
+		// logs workout data when modal is closed
+	$('#workout-modal').on('hidden.bs.modal', function(){
+		buildWorkoutObject();
+		updateCharts();
+	});
 
-	$('#greet-user').on('click', function(){
-		$('#greet-user img').toggle('explode');
-	})
+	// logs relapse data when modal is closed
+	$('#relapse-modal').on('hidden.bs.modal', function(){
+		buildRelapseObject();
+		updateCharts();
+		console.log('relapse submitted')
+	});
+
 
 	$('#scroll-left').on('click', function(){
 		console.log('left');
@@ -430,6 +500,27 @@ $(function() {
 		console.log('right');
 	});
 
-	$('#greet-user').toggle('drop');
+	function show()	{
+		$('#greet-user').toggle('fold', 2000);
+	}
+
+	setTimeout(show, 1000);
+
+	// $('body').on('click', function(){
+	// 	$('#greet-user').toggle('fold');
+	// })
+	
+	 $('#weekly').on('click', function(){
+	 	console.log('clickweek');
+    	buildLineChartByWeek(dataTransformer.typeLineByWeeks(workoutData));
+    });
+
+	 $('#daily').on('click', function(){
+    	console.log('clickday');
+    	buildLineChart(dataTransformer.typeLineChart(workoutData));
+	});
+	
+
+
 
 })

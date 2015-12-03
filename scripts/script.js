@@ -1,6 +1,6 @@
 $(function(){
 
-	setInterval(memberCount, 3000);
+	setInterval(memberCount, 1000);
 	var $signupBtn = $('#signupBtn');
 
 	// hide all pages except for the login page
@@ -30,19 +30,12 @@ $(function(){
 	var name = localStorage.getItem('username');
 	$('#member-name').text(name);
 
-
-
-
-	
-
-	
-	
 });
 
 // Random member count generator
 function memberCount(){
 	var $count = $('.num');
-	var random = Math.floor(Math.random() * 100);
+	var random = Math.floor(Math.random() * 2);
 
 	var currentCount = Number(removeCommas($count.text()));
 	currentCount += random;
