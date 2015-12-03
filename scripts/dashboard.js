@@ -47,7 +47,7 @@ $(function() {
 		buildLineChart(dataTransformer.typeLineChart(workoutData), "Workouts by Duration (min)", "#workout-line-chart svg");
 	};
 
-	d3.json('../data/new_workouts_two.json', loadDataRenderCharts);
+	d3.json('FitnessMonkey/data/new_workouts_two.json', loadDataRenderCharts);
 
 
 		// logs relapse data when modal is closed
