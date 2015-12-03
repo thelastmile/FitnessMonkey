@@ -1,176 +1,114 @@
-.fm-banner {
-	padding-bottom:5em;
-	padding-top:5em;
-	font-face-name:"Proxima Nova";
-	/*background-image: url("../assets/star.jpg");
-	background-repeat: no-repeat;*/
-	color: floralwhite;
-  	background: linear-gradient(#111630, #2C2C59, #393F5F);	
-  /*background colors #010228, #212143, #55579B*/ /*#111630, #171240, #60647A*/ /*#111630, #0A0A48, #60647A*/
+@font-face {
+	font-family: 'ProximaNova-Light';
+	src: url('Proxima Nova/ProximaNova-Light.otf');
 }
 
-.margin-top-20 {
-	margin-top:20px;
+@font-face {
+	font-family: 'ProximaNova';
+	src: url('Proxima Nova/ProximaNova-Regular.otf');
 }
 
-.margin-top-45 {
-	margin-top:4.5em;
+.navbar-inverse {
+    border: none;
+	background: rgba(204, 204, 204, 0.42);
+	box-shadow: 5px 5px 5px 0px rgba(204,204,204,0.65);
 }
 
-.text-right {
-	font-size: 1.5em;
+ #logo {
+	width: 4em;
+	padding-top: 1em;
+	margin-left: 1em;
 }
 
-.title-text {
-	font-size:2em;
-}
-
-.page {
-	display: none;
-}
-
-a {
-	color: white;
-	font-size: 0.9em;
-	
-	padding-right: 13em;
-	margin-top: 2em;	
-}
-
-.description-text p {
-	margin-top: 4.5em;
-  font-size: 1.5em;
-
-}
-
-/* user column styles
--------------------------------------*/
-/*joint the revolution section*/
-.form-signin-heading {
-	margin-top: 2em;
-
-}
-
-#username {
-	width: 23em;
-	margin-top: 1em;
-	border: none;
-	border-bottom: 1px solid white;	 
-	background-color: rgba(0, 29, 255, 0);
-	border-radius: 0;
-	box-shadow: none;
-}
-
-input::-placeholder {
-	color: white;
-}
-
-#password {
-	width:  23em;
-	margin-top: 2em;
-	border: none;
-	border-bottom: 1px solid grey;
-	background-color: rgba(0, 29, 255, 0);
-	border-radius: 0;
-	box-shadow: none;
-
-}
-
-#loginBtn {
-	margin-left: 0;
-	width:  23em;
-	margin-top: 2.5em;
-	margin-bottom: 1.5em;
-	border-color: #00ebd2;
-	color: #00ebd2;
-	background-color: rgba(0, 29, 255, 0);
-	border-radius: 0;
-
-}
-
-#signupBtn {
-	margin-left: 0;
-	width:  23em;
-	border-color: #00ebd2;
-	color: #00ebd2;
-	background-color: rgba(0, 29, 255, 0);
-	border-radius: 0;
-}
-
-/*******************************/
-.chartrows {
-	border-bottom: 1px solid lightgray;/*#00ebd2*/
-}
-
-.charts {
-	margin-bottom: 20px;
-}
-
-/*//////////////////////////////////////////////////////////////////////*/
-	
-/*inside the app guts*/
-table {
-	background-color: white;
-	text-align: center;
-	border-radius: .5em;
-}
-
-#log {
-	background-color: white;
-	border: 1px solid dodgerblue;
-	border-radius: 1em;
-	text-align: center;
-}
-
-#log li {
-	padding: 1em;
-	border-bottom: 1px solid lightgray;
-}
-
-#log li:last-child {
-	border-bottom: none;
-}
-
-svg {
-	background-color: floralwhite;
-	border: 1px solid dodgerblue;
-	margin: 0 auto;
-}
-
-.axis path, .axis line {
-	fill: none;
-	stroke: limegreen;
-	shape-rendering: crispEdges;
-}
-
-.axis text {
-	fill: limegreen;
-	font-family: sans-serif;
-	font-size: 8px;
-}
-
-circle:hover {
-	fill: red;
-}
-
-/* OPTIONS PAGE
---------------------------------------*/
-#options img {
-	width: 50%;
-}
-
-#options button {
-	margin: 10px auto;
-}
-
-/* RECOVERY PAGE
---------------------------------------*/
-#recoveryPage img {
-	width: 50%;
-}
-
-#add-workout {
-	width: 50%;
+#logo-brand {
 	color: black;
+	padding-top: 1.5em;
 }
+
+h1 {
+	word-spacing: 1px;
+	letter-spacing: 7px;
+	font-weight: bold;
+	color: black;
+	font-size: 4em;
+}
+
+/*controls h1 top margin*/
+.margin-top-45 {
+	margin-top: 45px;
+}
+
+/*background imagesection/fm banner container*/
+.fm-banner {
+	background-image: url('../assets/Group Running Hero.jpg');
+  	background-size: cover;
+  	height: 633px;
+	color: floralwhite;
+	font-family: 'ProximaNova-Light';	
+}
+
+.fitness p {
+ 	color: black;
+ }
+
+.btn-primary {
+ 	font-weight: bold;
+    color: black;
+    background-color: rgba(51, 122, 183, 0);
+    border-color: black;
+}
+
+.description-graphs p{
+	font-family: 'ProximaNova-Light';
+}
+
+/*controls all the margin-top-20's*/
+.margin-top-20 {
+	margin-top: 2em;
+}
+
+.members {
+	color: #635402;
+	background: rgba(204, 204, 204, 0.42);
+}	
+	
+/*top features h2*/
+h2 {
+	font-weight: bold;
+	margin-top: 2em;
+}
+
+/*charts titles*/
+span {
+	font-weight: bold;
+}
+
+.images {
+	height: 120px;
+}
+
+.footer{
+	background: rgba(204, 204, 204, 0.42);
+	margin-top: 7em;
+}
+
+/*media query to disappear background image at 600px*/
+@media only screen and (max-width: 600px) {
+	.fm-banner {
+		margin-right: -2em;
+		margin-left: -2em;
+		background-image: none;
+		height: 433px;
+		background: rgba(204, 204, 204, 0.42);
+	}
+}
+		
+  		
+
+
+
+
+	
+
+	
 

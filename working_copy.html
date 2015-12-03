@@ -17,98 +17,203 @@
 <body>
 	<div id="wrapper" class="container-fluid">
 		<!-- Navbar content -->
-		<nav class="navbar navbar-inverse">
+		<nav class="my-navbar navbar navbar-inverse">
 			<div class="container-fluid">
 			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    	
-			    <img id="logo" class="pull-left" src="assets/monkey.png">
-			    <a class="navbar-brand" href="#">Fitness Monkey</a>
-			    
-			  </div>
+				<div class="navbar-header">
+				  	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+	        		<span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+	      			</button>
+				    	
+				    <img id="logo" class="pull-left" src="assets/fitness_monkey_logo_new.png">
+				    <a  id="logo-brand" class="navbar-brand" href="index.html"> Fitness Monkey</a>
+				</div>
 
-			  <div class="navbar-right">
-			  	<button  type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#workout-modal" id="log-workout-btn" type="button" class="btn navbar-btn btn-success">
-					<span class="glyphicon glyphicon-plus"></span> workout
-				</button>
-				<button id="log-relapse-btn" type="button" class="btn navbar-btn btn-danger pull-right" data-toggle="modal" data-target="#relapse-modal">
-					<span class="glyphicon glyphicon-minus"></span> relapse
-				</button>	
-			  </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      
+			      <ul class="nav navbar-nav navbar-right">
+					<li class="visible-xs text-center">
+						<a href="#charts">View Charts</a>
+					</li>
+					<li class="visible-xs text-center">
+						<a href="#fitness-challenge">Daily Fitness Challenge</a>
+					</li>
+			        <li>
+			        	<button  type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#workout-modal" id="log-workout-btn" type="button" class="btn navbar-btn btn-success">
+							<span class="glyphicon glyphicon-plus"></span> workout
+						</button>
+						<button id="log-relapse-btn" type="button" class="btn navbar-btn btn-danger pull-right" data-toggle="modal" data-target="#relapse-modal">
+						<span class="glyphicon glyphicon-minus"></span> relapse
+						</button>	
+					</li>
+			        
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
 		</nav>
 
 		<div class="container-fluid">
-			
-			<div class="row">
-
-				<div class="col-sm-8">
+			<div id="sidebar" class="col-sm-2">
+				<div class="well well-sm">
 					<div class="row">
-						<div class="stats">
-							<ul class="list-unstyled list-horizontal nav-justified">
-								<li>
-									<h3>Days Clean</h3>
-									<p id="clean-time">31</p>
-								</li>
-								<li>
-									<h3>Days Since Last Workout</h3>
-									<p id="last-workout">3</p>
-								</li>
-								<li>
-									<h3>Workout Days in a Row</h3>
-									<p id="total-workouts">7</p>
-								</li>
-							</ul>
+						<div class="col-xs-4">
+							<div id="profile-pic-div">
+								<img class="img-responsive" src="assets/fitness_monkey_logo_new.png">
+							</div>
 						</div>
-					</div>
-
-					<div class="row">
-						<div id="workout-line-chart">
-							<button id="zoomIn" class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-minus"></span></button>
-							<button id="zoomOut"class="pull-right btn btn-success btn-sm"><span class="glyphicon glyphicon-plus"></span></button>
-							<h3>Average duration of workouts by week</h3>
-							<svg></svg>
-						</div>
-					</div>
-
-
-					<div class="row chart-couple">
-						<div class="col-xs-6">
-							<div id="workout-donut-chart">
-								<h3>Average urge to relapse by type</h3>
-								<svg></svg>				
-							</div>						
-						</div>
-						<div class="col-xs-6">
-							<div id="workout-bar-chart" >
-								<h3>Average ranking of <u>FUN</u> by category</h3>
-								<svg></svg>				
+						<div class="col-xs-8">
+							<div id="member-name-div">
+								<h3 id="one">Hi <span id="member-name"></span></h3>
 							</div>
 						</div>
 					</div>
-
 				</div>
-			
-				<div class="col-sm-4 col">
-					<div id="workout-log">
-						<div class="row">
-							<h3>Relapse-meter</h3>
-							<div id="relapse-div">
-								<p id="relapse-meter" class="text-center">2.9</p>
+				
+				<div class="row">
+					
+					<div class="panel panel-info">
+							<div class="panel-heading text-center">
+							<h3 class="panel-title">Member info</h3>
+							</div>
+  						<div class="panel-body">
+							<p id="two">Congratulations on <span class="clean-time"></span> days clean.</p>
+							<p id="three">You're relapse-meter is in the <span id="color-indicator">yellow</span>, so take some time for self-care.</p>
+							<p id="four">It's been <span class="last-workout"></span> days since your last workout, but no worries. </p>
+							<p id="five">Take the Daily Fitness Challenge. It will get you in gear!</p>	
+  						</div>
+					</div>						
+					
+				</div>
+
+				<div class="row">
+					<div class="panel panel-info">
+  						<div class="panel-heading text-center">
+    						<h3>Relapse Meter</h3>
+
+  						</div>
+  						<div id="relapse-meter-div" class="panel-body">
+							<canvas id="my-canvas-element"></canvas>
+							<p class="lead text-center" id="relapse-meter">3.7</p>
+  						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-10">
+				<div class="container-fluid">
+					<div class="row text-center stats">
+						<div class="col-sm-4">
+							<div id="days-clean-div">
+								<h2>Days Clean</h2>
+								<p class="clean-time">31</p>
 							</div>
 						</div>
-
-						<div class="row text-center">
-							
-							
-							<div id="fitness-challenge">
-								<h3 class="text-center">Daily Fitness Challenge</h3>
-								<img class="teal-border" src="assets/woman_jogging.jpg">			
+						<div  class="col-sm-4">
+							<div id="last-workout-div">
+								<h2>Days Since Last Workout</h2>
+								<p class="last-workout">3</p>
 							</div>
 						</div>
-					</div>	
-				</div><!-- .col-sm-4 -->
+						<div class="col-sm-4">
+							<div id="workout-days-div">
+								<h2>Workout Days in a Row</h2>
+								<p class="total-workouts">7</p>
+							</div>
+						</div>	
+					</div>
 
-			</div><!-- row -->	
+					<div class="row">
+						<div class="col-sm-9 mid-row">
+							<div id="workout-line-chart">
+								<button id="daily" class="pull-left btn btn-success btn-sm">daily</button>
+								<button id="weekly" class="pull-left btn btn-success btn-sm">weekly</button>
+								<!-- <button id="scroll-right" class="pull-right btn btn-sm"><span class="glyphicon glyphicon-chevron-right"></span></button>
+								<button id="scroll-left" class="pull-right btn btn-sm"><span class="glyphicon glyphicon-chevron-left"></span></button> -->
+								<h3 class="text-center">Average duration of workouts by day/week</h3>
+								<svg></svg>
+							</div>
+
+							<div class="row chart-couple">
+								<div class="col-sm-6">
+									<div id="workout-donut-chart">
+										<h3>Average urge to relapse by type</h3>
+										<svg></svg>				
+									</div>						
+								</div>
+								<div class="col-sm-6">
+									<div id="workout-bar-chart" >
+										<h3>Favorites</h3>
+										<svg></svg>				
+									</div>
+								</div>							
+							</div>
+
+						</div>
+
+
+						<div class="col-sm-3 mid-row">
+							<div class="panel panel-info text-center">
+								<div class="panel-heading">
+									<h3>Daily Fitness Challenge</h3>
+									<h4 id="date-text">Wed 12/2</h4>
+								</div>
+
+  								<div class="panel-body">
+									<table class="table table-striped table-hover">
+										<thead>
+											<tr>
+												<th class="text-center">Exercise</th>
+												<th class="text-center">Done</th>
+											</tr>
+										</thead>
+
+										<tbody>
+											<tr>
+												<td>50 pushups</td>
+												<td><input type="checkbox" value="10"></td>
+											</tr>
+											<tr>
+												<td>50 situps</td>
+												<td><input type="checkbox" value="10"></td>
+											</tr>
+											<tr>
+												<td>50 pullups</td>
+												<td><input type="checkbox" value="10"></td>
+											</tr>
+											<tr>
+												<td>100 jumping jacks</td>
+												<td><input type="checkbox" value="10"></td>
+											</tr>
+											<tr>
+												<td>5 mile jog</td>
+												<td><input type="checkbox" value="10"></td>
+											</tr>
+										</tbody>
+									</table>
+									<button  type="button" class="btn btn-success " data-toggle="modal" data-target="#fitness-challenge-modal" id="fitness-challenge-btn" type="button" class="btn navbar-btn btn-success">
+										Done
+									</button>
+  								</div>
+							</div>	
+
+							<div class="panel panel-info">
+		  						<div class="panel-heading text-center">
+		    						<h3 class="panel-title">Community / Support</h3>
+		  						</div>
+			  					<div id="relapse-meter-div" class="panel-body">
+									<p><a href="#">Ed Ballenger (sponsor)</a></p>
+									<p><a href="#">AA/NA meetings</a></p>
+									<p><a href="#">Rehab Center</a></p>
+			  					</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 	<!-- Workout Modal -->
@@ -127,19 +232,97 @@
 				  			</div>
 				  			<div class="form-group">
 				    			<label for="duration-input">What was the duration?</label>
-				    			<input type="number" class="form-control" id="duration-input" placeholder="duration in minutes" min="0">
+				    			<input type="number" class="form-control" id="duration-input" placeholder="duration in minutes" min="0" step="5">
 				  			</div>
 				  			<div class="form-group">
-				    			<label for="intensity-input">What was the intensity</label>
-				    			<input type="number" class="form-control" id="intensity-input" placeholder="rate the intensity level 1 - 9" min="1" max="9">
+				    			<label for="intensity-input">What was the intensity</label><br>
+				    			<label class="radio-inline">
+									<input type="radio" name="intensity" value="1"> 1
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="intensity"  value="2"> 2
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="intensity" value="3"> 3
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="intensity" value="4"> 4
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="intensity"  value="5"> 5
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="intensity" value="6"> 6
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="intensity" value="7"> 7
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="intensity"  value="8"> 8
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="intensity" value="9"> 9
+								</label>
 				  			</div>					  	
 				  			<div class="form-group">
-				    			<label for="relapse-input">Rate your urge to relapse</label>
-				    			<input type="number" class="form-control" id="relapse-input" placeholder="rate your urge to relapse 1 - 9" min="1" max="9">
+				    			<label for="relapse-input">Rate your urge to relapse</label><br>
+				    			<label class="radio-inline">
+									<input type="radio" name="relapse-urge" value="1"> 1
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="relapse-urge"  value="2"> 2
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="relapse-urge" value="3"> 3
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="relapse-urge" value="4"> 4
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="relapse-urge"  value="5"> 5
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="relapse-urge" value="6"> 6
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="relapse-urge" value="7"> 7
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="relapse-urge"  value="8"> 8
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="relapse-urge" value="9"> 9
+								</label>
 				  			</div>					  	
 				  			<div class="form-group">
-				    			<label for="fun-factor-input">Rate the fun factor</label>
-				    			<input type="number" class="form-control" id="fun-factor-input" placeholder="How fun was this workout 1 - 9" min="1" max="9">
+				    			<label for="fun-factor-input">How fun was this workout?</label><br>
+				    			<label class="radio-inline">
+									<input type="radio" name="fun" value="1"> 1
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="fun"  value="2"> 2
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="fun" value="3"> 3
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="fun" value="4"> 4
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="fun"  value="5"> 5
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="fun" value="6"> 6
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="fun" value="7"> 7
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="fun"  value="8"> 8
+								</label>
+								<label class="radio-inline">
+								  	<input type="radio" name="fun" value="9"> 9
+								</label>
 				  			</div>
 			      		</div>
 			     		<div class="modal-footer">
@@ -177,7 +360,7 @@
 								</label>
 				  			</div>
 						  	<div class="form-group">
-						    	<label for="duration-input">Where were you?</label>
+						    	<label for="duration-input">Where did your relapse occur?</label>
 						    	<input type="text" class="form-control" id="location-input" placeholder="enter location of relapse" min="0">
 						  	</div>
 						  	<div class="form-group">
@@ -253,17 +436,31 @@
 		    	</div>
 		  	</div>
 		</div>
+
+		<!-- Relapse Modal -->
+		<div class="modal fade" id="fitness-challenge-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  	<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        		<h3 class="modal-title text-center" id="myModalLabel">Fitness Challenge Results</h3>
+		      		</div>
+		      		<div class="modal-body">
+		        		
+		    		</div>
+		  	</div>
+		</div>
 	</div>
-
-	<script type="text/javascript">
-
-	</script>
-
 
 
 	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="bootstrap/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="lib/holderJS_lite/lib/holder.min.js"></script>
+	<script type="text/javascript" src="lib/moment.min.js"></script>
+	<script type="text/javascript" src="scripts/d3_charts.js"></script>
 	<script type="text/javascript" src="scripts/script.js"></script>
-	<script type="text/javascript" src="scripts/working_copy_d3.js"></script>
+	<script type="text/javascript" src="scripts/dashboard.js"></script>
+	<script type="text/javascript" src="lib/gauge.js"></script>
+
+	<!-- // <script type="text/javascript" src="scripts/dashboard.js"></script> -->
 </body>

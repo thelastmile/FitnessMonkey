@@ -1,0 +1,3 @@
+I'd go with Scheme 7 and add the Teal from Scheme 8 A200, and maybe Orange 500 from Scheme 1 if they need another color (maybe not depending on how well it plays with others). 
+
+Here's an example of Scheme 7 used effectively (attached). 

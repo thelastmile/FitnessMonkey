@@ -1,0 +1,28 @@
+
+//	Data processing script - Add 'week' to each workout.
+//	d3.json to import workouts.json
+//	JSON.parse to create array of javascript objects out of workouts.json
+//	Iterate through workouts, use map(); using moment(date).week(); to get week for each workout.
+//	Transform back into JSON using JSON.stringify
+//	Append to empty html page
+//	Open in browser, select all and copy new JSON (with week data)
+//	Save as new workouts.json
+//	Use as the base data set.
+
+// Data diplay
+//	Weekly/Daily buttons that determine the granularity of each row
+//	Scroll buttons that page through the dataset
+//	With 'Weekly' each page is a month
+//	With 'Daily' each page is a week.
+
+//	Click event for Weekly, next page 
+//	Calls data transformer, 
+//	Returns workouts happening between weeks 8 and 14
+//	Calculates totals/averages for each week.
+//	Redraws chart using new dataset
+//	Might need to set tickFormat here to be 7 days. 
+
+//	Click event for Daily, next page
+//	Calls data transformer
+//	Returns workouts happening within week 2.
+//	Redraws chart using new dataset.

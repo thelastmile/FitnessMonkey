@@ -9,6 +9,18 @@
 	BLUE		- #2867d5
 	AQUA		- #00ebd2
 */
+/* 
+	BLUE		- #1f77b4
+ 	ORANGE		- #ff7f0e
+ 	GREEN		- #2ca02c
+ 	RED			- #d62728
+ 	PURPLE		- #9467bd
+ 	BROWN		- #8c564b
+ 	PINK		- #e377c2
+ 	GRAY		- #7f7f7f
+ 	OLIVE		- #bcbd22
+ 	TEAL 		- #17becf
+ */
 
 @font-face {
 	font-family: 'ProximaNova-Light';
@@ -21,10 +33,11 @@
 }
 
 body{
-	background-image: linear-gradient(#202126, #333352, #2867d5);
-	color: #00ebd2;
+	/*background-image: linear-gradient(#202126, #333352, #2867d5);*/
+	background-color: #ddd;
 	font-family: 'ProximaNova-Light';
 	padding-bottom: 5em;
+	color: black;
 }
 
 .navbar {
@@ -39,13 +52,83 @@ body{
 	margin: .7em;
 }
 
-#fitness-challenge{
-	padding: 1em;
-	margin-bottom: 3em;
+#logo-brand {
+	font-weight: bold;
+	font-size: 20px;
 }
 
-#navbar-btn li:first-child {
-	margin-right: 1em;
+/* sidebar styles
+--------------------------------------------------------*/
+
+#sidebar {
+	background-color: white;
+	padding-top: 5px;
+	font-size: 1.2em;
+}
+
+#sidebar span {
+	font-weight: bold;
+}
+
+#profile-pic-div {
+	margin-top: 5px;
+}
+
+/* greet user styles
+-----------------------------------------------*/
+
+#relapse-meter {
+	font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 3px;
+    right: 95px;
+}
+
+#my-canvas-element {
+	width: 100%;
+}
+
+/* chart styles
+--------------------------------*/
+.panel {
+	border-radius: 0;
+}
+
+#workout-line-chart,
+#workout-donut-chart,
+#workout-bar-chart,
+#days-clean-div,
+#last-workout-div,
+#workout-days-div,
+#fitness-challenge-div{
+	padding: 5px;
+	background-color: white;
+}
+
+.mid-row {
+	margin-top: 20px;
+}
+
+.stats p {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+#days-clean-div {
+	background-color: #2867d5;
+}
+
+#last-workout-div {
+	background-color: #00ebd2;
+}
+
+#workout-days-div {
+	background-color: #2867d5;
+}
+
+#table-div {
+	background-color: white;
 }
 
 
@@ -55,31 +138,30 @@ body{
 
 #log-workout-btn {
 	background-color: #2867d5;
+	margin-right: 1em;
 }
 
 #log-relapse-btn {
 	background-color: #c40147;
 }
 
-.ads {
-	text-align: center;
-}
-
-.ads img{
-	margin: 1em;
-}
 
 /* DASHBOARD STYLES
 -------------------------------------*/
 
 svg {
-	background-image: linear-gradient(#202126, #333352);
-	border: 2px solid #00ebd2;
+	/*background-color:  #202126;*/
+	/*border: 1px solid #00ebd2;*/
 	border-radius: .5em;
 }
 
 #workout-line-chart svg {
 	height: 250px;
+	padding: 0 1em;
+}
+
+.chart-couple {
+	margin-top: 20px;
 }
 
 .chart-couple svg {
@@ -88,13 +170,14 @@ svg {
 
 text {
 	stroke-width: 1;
-	stroke: #00ebd2;
+	/*stroke: #00ebd2;*/
 }
 
 #workout-line-chart button {
 	margin-right: .5em;
 	outline: none;
-	color: #00ebd2;
+	color: white;
+	font-size: 1em;
 	background-color: #2867d5;
 }
 
@@ -106,53 +189,18 @@ text {
 	stroke: none;
 }
 
-.stats li {
-	border-bottom: 1px solid #00ebd2;
-	border-left: 1px solid #00ebd2;
-	border-radius: .5em;
-	padding: .5em;
+/* form styles
+------------------------------------*/
+
+.radio-inline {
+	margin: 0 10px;
 }
 
-.stats p, .row p {
-	margin: .3em;
-	font-size: 1.4em;
-}
 
-.stats li > p:last-child {
-	font-size: 3em;
-	text-align: center;
-	color: #00ebd2;
-	border-radius: 1em;
-}
-
-#relapse-div {
-	width: 200px;
-	height: 200px;
-	background-image: linear-gradient(#202126, #333352);
-	border: 5px solid #00ebd2;
-	border-radius: 100px;
-	margin: 0 auto;
-}
-
-#relapse-div p {
-	font-size: 5em;
-	color: limegreen;
-	margin: 50px auto;
-}
-
-#fitness-challenge img {
-	width: 100%;
-	height: 100%;
-}
-
-.teal-border {
-	border: 2px solid #00ebd2;
-	border-radius: .5em;
-}
+/* Modal styles 
+------------------------------------*/
 
 #workout-modal, #relapse-modal {
 	color: #25252d;
 	font-size: 1.7em;
 }
-
-
