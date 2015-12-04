@@ -164,6 +164,11 @@ function buildBarChart(data, title, selector){
     		// .staggerLabels(historicalBarChart[0].values.length > 8)
     		.showValues(true)
     		.duration(1200);
+
+    	chart.yAxis
+    		.ticks(9)
+        	.axisLabel('Ranking of Fun by Category')
+            
   
 		d3.select(selector)
     		.datum(chartData)

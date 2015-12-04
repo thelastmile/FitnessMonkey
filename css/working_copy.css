@@ -1,6 +1,5 @@
 /* COLOR PALLETTE
 -----------------------------*/
-
 /* 
 	BLACK 		- #202126
 	DARK GRAY	- #25252d
@@ -9,19 +8,9 @@
 	BLUE		- #2867d5
 	AQUA		- #00ebd2
 */
-/* 
-	BLUE		- #1f77b4
- 	ORANGE		- #ff7f0e
- 	GREEN		- #2ca02c
- 	RED			- #d62728
- 	PURPLE		- #9467bd
- 	BROWN		- #8c564b
- 	PINK		- #e377c2
- 	GRAY		- #7f7f7f
- 	OLIVE		- #bcbd22
- 	TEAL 		- #17becf
- */
 
+/* typography styles
+---------------------------------------------*/
 @font-face {
 	font-family: 'ProximaNova-Light';
 	src: url('Proxima Nova/ProximaNova-Light.otf');
@@ -33,75 +22,108 @@
 }
 
 body{
-	/*background-image: linear-gradient(#202126, #333352, #2867d5);*/
 	background-color: #ddd;
 	font-family: 'ProximaNova-Light';
 	padding-bottom: 5em;
 	color: black;
 }
 
+/* navbar styles
+-----------------------------------------------------*/
+
 .navbar {
 	background-color: inherit;
 	border: none;
-	border-bottom: 2px solid rgba(4,4,4,.5);
 }
 
 #logo {
-	width: 3em;
+	width: 50px;
 	height: auto;
 	margin: .7em;
 }
 
 #logo-brand {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 24px;
+	color: #2867d5;
+}
+
+#logo-brand:hover {
+	color: white;
 }
 
 /* sidebar styles
 --------------------------------------------------------*/
 
-#sidebar {
-	background-color: white;
-	padding-top: 5px;
+.sidebar {
+	background-color: #eee;
 	font-size: 1.2em;
 }
 
-#sidebar span {
+.sidebar > div {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.sidebar img {
+	width: 60%;
+	margin: 10px;
+}
+
+
+.sidebar span {
 	font-weight: bold;
 }
 
-#profile-pic-div {
-	margin-top: 5px;
+.panel {
+	border-radius: 0;
+	background-color: #bbb;
 }
+
+.panel:hover,
+#workout-line-chart:hover,
+#workout-bar-chart:hover,
+#workout-donut-chart:hover,
+.stats > div > div:hover {
+	box-shadow: 2px 2px 2px #aaa;
+}
+
+table {
+	background-color: white;
+}
+
 
 /* greet user styles
 -----------------------------------------------*/
+
+#interface span {
+	font-size: 1.2em;
+	color: #2867d5;
+}
+
+/* gauge-styles
+--------------------------------------------------*/
+#my-canvas-element {
+	width: 100%;
+}
 
 #relapse-meter {
 	font-size: 3em;
     font-weight: bold;
     position: absolute;
-    bottom: 3px;
-    right: 95px;
-}
-
-#my-canvas-element {
-	width: 100%;
+    right: 37.5%;
+    bottom: -5px;
 }
 
 /* chart styles
 --------------------------------*/
-.panel {
-	border-radius: 0;
-}
 
 #workout-line-chart,
 #workout-donut-chart,
 #workout-bar-chart,
 #days-clean-div,
 #last-workout-div,
-#workout-days-div,
-#fitness-challenge-div{
+#workout-days-div {
 	padding: 5px;
 	background-color: white;
 }
@@ -149,15 +171,15 @@ body{
 /* DASHBOARD STYLES
 -------------------------------------*/
 
-svg {
-	/*background-color:  #202126;*/
-	/*border: 1px solid #00ebd2;*/
-	border-radius: .5em;
-}
+
 
 #workout-line-chart svg {
 	height: 250px;
 	padding: 0 1em;
+}
+
+#workout-line-chart h3 {
+	margin-top: 15px;
 }
 
 .chart-couple {
@@ -165,7 +187,7 @@ svg {
 }
 
 .chart-couple svg {
-	height: 275px;
+	height: 250px;
 }
 
 text {
@@ -178,7 +200,6 @@ text {
 	outline: none;
 	color: white;
 	font-size: 1em;
-	background-color: #2867d5;
 }
 
 #workout-line-chart line {

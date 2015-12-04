@@ -35,7 +35,7 @@ $(function(){
 // Random member count generator
 function memberCount(){
 	var $count = $('.num');
-	var random = Math.floor(Math.random() * 2);
+	var random = Math.floor(Math.random() * 100);
 
 	var currentCount = Number(removeCommas($count.text()));
 	currentCount += random;

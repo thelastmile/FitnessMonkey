@@ -12,22 +12,40 @@ $(function() {
 	var gauge= new fabledweb.Gauge({
 	        "tick_length": 30,
 	        "large_tick_length": 60,
-	        "tick_thickness": 4,
+	        "tick_thickness": 5,
 	        "num_sub_ticks": 4,
 	        "total_degrees": 180,
 	        "tick_color": "#555962",
 	        "tick_on_color": "#527d98",
-	        "tick_on_glow": 10,
+	        "tick_on_glow": 20,
 	        "bg_image": null,
 	        "gauge_scale": .9,
 	        "animation_duration": 1000,
-	        "percent": 70,
+	        "percent": 75,
 	        "canvas": my_canvas_obj
 	});
+	
 
 	gauge.render(); //render the configured gauge
 
-	gauge.updatePercent(66); //animate the gauge to 30%
+	function updateGauge(number){
+		var color;
+		var percentage = parseInt(number * 11.1);
+
+		if(number <= 3){
+			color = 'green';
+		} else if (number <= 6){
+			color = 'yellow';
+		} else {
+			color = 'red';
+		}
+
+		$('#color-indicator').css('color', color).text(color);
+
+		gauge.tick_on_color = color;
+		gauge.updatePercent(percentage);
+		gauge.render();
+	};
 
 	var loadDataRenderCharts = function(data){
 		workoutData = data.workouts
@@ -45,9 +63,10 @@ $(function() {
 		buildDonutChart(dataTransformer.typeDonutChart(workoutData), "FitMo", "#workout-donut-chart svg");
 		buildBarChart(dataTransformer.typeBarChart(workoutData), "Workouts by Type", "#workout-bar-chart svg");
 		buildLineChart(dataTransformer.typeLineChart(workoutData), "Workouts by Duration (min)", "#workout-line-chart svg");
+		updateGauge(relapseRisk(workoutData));
 	};
 
-	d3.json('FitnessMonkey/data/new_workouts_two.json', loadDataRenderCharts);
+	d3.json('../data/new_workouts_two.json', loadDataRenderCharts);
 
 
 		// logs relapse data when modal is closed
@@ -122,12 +141,16 @@ $(function() {
 	function updateRelapseMeter(num){
 		var $relapseText = $('#relapse-meter');
 		if(num <= 3){
-			$relapseText.css('color', 'limegreen').text(num);
+			// $relapseText.css('color', 'limegreen').text(num);
+			$relapseText.text(num);
 		} else if(num > 3 && num <= 6){
-			$relapseText.css('color', 'yellow').text(num);
+			// $relapseText.css('color', 'yellow').text(num);
+			$relapseText.text(num);
 		} else {
-			$relapseText.css('color', 'red').text(num);
+			// $relapseText.css('color', 'red').text(num);
+			$relapseText.text(num);
 		}
+		updateGauge(num);
 	};
 
 	function relapseRisk(data){
