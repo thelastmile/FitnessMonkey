@@ -124,6 +124,8 @@ function buildDonutChart(data, title, selector){
 
     nv.addGraph(function() {
         var chart1 = nv.models.pieChart()
+        	.color(['#fd526a', '#dbbb1f', '#39c8ce', '#dd4cab', '#554cac', '#2867d5', '#2a2930'])
+            .legendPosition('right')
             .x(function(d) { return d.key })
             .y(function(d) { return d.y })
             .donut(true)
@@ -131,10 +133,13 @@ function buildDonutChart(data, title, selector){
             .height(height)
             .padAngle(.05)
             .cornerRadius(5)
-            .id('donut1'); // allow custom CSS for this one svg
+            .id('donut1') // allow custom CSS for this one svg
 
         chart1.title(title);
-        chart1.pie.donutLabelsOutside(true).donut(true);
+        chart1.pie
+        	// .labelsOutside(true)
+        	.donut(true)
+        	.showLabels(false);
 
         d3.select(selector)
             .datum(data)
@@ -142,7 +147,7 @@ function buildDonutChart(data, title, selector){
             .call(chart1);
 
         nv.utils.windowResize(chart1.update);
-        // d3.selectAll('text').style('font-family', 'ProximaNova-Light');
+        d3.selectAll('text').style('font-family', 'ProximaNova-Light');
 
         return chart1;
 
@@ -163,10 +168,11 @@ function buildBarChart(data, title, selector){
     		.staggerLabels(true)
     		// .staggerLabels(historicalBarChart[0].values.length > 8)
     		.showValues(true)
-    		.duration(1200);
+    		.duration(1200)
+    		.color(['#fd526a', '#dbbb1f', '#39c8ce']);
 
     	chart.yAxis
-    		.ticks(9)
+    		.ticks(5)
         	.axisLabel('Ranking of Fun by Category')
             
   
@@ -206,12 +212,12 @@ var dataTransformer = {
 			{
 				values: objStorage,
 				key: 'Duration of workouts by week',
-				color: "#00ebd2"
+				color: "#dbbb1f"
 			},
 			{
 				values: relapseZoneStorage,
 				key: 'Relapse Zone',
-				color: '#c40147'
+				color: '#fd526a'
 			}
 		];
 	},
@@ -230,12 +236,12 @@ var dataTransformer = {
 				{
 					values: objStorage,
 					key: "Duration of Workouts",
-					color: "#00ebd2"	
+					color: "#dbbb1f"	
 				},
 				{
 					values: relapseZoneStorage,
 					key: 'Relapse Zone',
-					color: '#c40147'	
+					color: '#fd526a'	
 				}	
 			];
 		return results;

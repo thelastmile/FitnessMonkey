@@ -1,3 +1,14 @@
+ 
+/* new color pallette 12-7 
+-----------------------------------------
+	black 		- #2a2930
+	purple		- #554cac
+	pink		- #dd4cab
+	orange		- #fd526a
+	yellow		- #ffe14f
+	teal  		- #39c8ce
+*/
+
 @font-face {
 	font-family: 'ProximaNova-Light';
 	src: url('Proxima Nova/ProximaNova-Light.otf');
@@ -7,21 +18,40 @@
 	font-family: 'ProximaNova';
 	src: url('Proxima Nova/ProximaNova-Regular.otf');
 }
+body{
+	
+	font-family: 'ProximaNova';
+}
+
 
 .navbar-inverse {
-    border: none;
+	
+  border: none;
 	background: rgba(204, 204, 204, 0.42);
 	box-shadow: 5px 5px 5px 0px rgba(204,204,204,0.65);
 }
+.navbar-inverse .navbar-nav>li>a {
+	font-size: large;
+	margin-top:0em;
+  color: #554cac;
+  padding-top: 1.5em;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #39c8ce;
+    
+}
+
 
  #logo {
-	width: 4em;
+	width: 5em;
 	padding-top: 1em;
-	margin-left: 1em;
+	margin-left: 2em;
 }
 
 #logo-brand {
-	color: black;
+	color: #554cac;
+	font-weight: bold;
+	/*font-size: 24px;*/
 	padding-top: 1.5em;
 }
 
@@ -29,73 +59,116 @@ h1 {
 	word-spacing: 1px;
 	letter-spacing: 7px;
 	font-weight: bold;
-	color: black;
+	 color: black;
 	font-size: 4em;
 }
 
 /*controls h1 top margin*/
 .margin-top-45 {
-	margin-top: 45px;
+	margin-top: 6em;
 }
 
 /*background imagesection/fm banner container*/
 .fm-banner {
 	background-image: url('../assets/Group Running Hero.jpg');
-  	background-size: cover;
-  	height: 633px;
+  background-size: cover;
+  height: 633px;
 	color: floralwhite;
 	font-family: 'ProximaNova-Light';	
 }
 
 .fitness p {
- 	color: black;
+	font-size: large;
+ 	 color: black;
  }
 
- .fitness h3 {
- 	color: black;
- 	margin-bottom: 1em;
- }
-
-.btn-primary {
- 	font-weight: bold;
-    color: black;
-    background-color: rgba(51, 122, 183, 0);
-    border-color: black;
+.demo-btn {
+	background-color: inherit;
+	color: black;
 }
 
-.description-graphs p{
-	font-family: 'ProximaNova-Light';
+.demo-btn:hover {
+	background-color: #554cac;
 }
 
-/*controls all the margin-top-20's*/
-.margin-top-20 {
-	margin-top: 2em;
-}
-
-.members {
-	color: #635402;
+/*for words under numbers*/
+.running {
+	/*color: #635402;	*/
 	background: rgba(204, 204, 204, 0.42);
 }	
-	
-/*top features h2*/
-h2 {
-	font-weight: bold;
-	margin-top: 2em;
+
+/*for size of numbers*/
+.num{
+	color: #554cac;
 }
 
+
+/*about fitness monkey section*/
+#about-section p {
+    margin: 20px 0;
+    font-size: 2.3em;
+}
+#about-section {
+	margin-top: 50px;
+}
+
+.jumbotron {
+	background-color: #6B64AB;
+	color: #eee;
+}
+
+.jumbotron h2 {
+	color: #eee;
+}
+
+/*top features h2*/
+.top h2 {
+	word-spacing: 1px;
+	letter-spacing: 7px;
+ 	 color: black;
+	font-weight: bold;
+	margin-top: 3em;
+}
+
+/*controls the title of charts*/
+/*h2{	
+	font-size: 24px;
+
+}
+*/
 /*charts titles*/
 span {
 	font-weight: bold;
 }
 
-.images {
-	  height: 100%;
-    width: 100%;
+.footer{
+	background-color: #eee;
+	margin-top: 7em;
+	padding: 15px;
 }
 
-.footer{
-	background: rgba(204, 204, 204, 0.42);
-	margin-top: 7em;
+.footer h2 {
+	color: #39c8ce;
+}
+
+.footer ul {
+	margin-top: 20px;
+	color: #554cac;
+	font-size: 1.5em;
+}
+
+.footer li:hover {
+	color: #39c8ce;
+}
+
+.col-sm-4 img {
+	width: 70%;
+	margin: 25px auto;
+}
+
+.footer small {
+	color: #39c8ce;
+	font-size: 1.2em;
 }
 
 /*media query to disappear background image at 600px*/
@@ -106,18 +179,17 @@ span {
 		background-image: none;
 		height: 433px;
 		background: rgba(204, 204, 204, 0.42);
+
 	}
+	
 }
 		
-  		
-
-
 /***** Ruby *****/
 /*---------------*/
 
 figure.effect-ruby {
-	    height: 38em;
-	    width: 26em;
+	height: 21em;
+	
 	background-color: rgba(239,222,191,0.3);
 }
 
@@ -130,6 +202,7 @@ figure.effect-ruby img {
 }
 
 figure.effect-ruby:hover img {
+
 	opacity: 0.5;
 	-webkit-transform: scale(1);
 	transform: scale(1);
@@ -146,7 +219,6 @@ figure.effect-ruby h2 {
 figure.effect-ruby p {
 	margin: 1em 0 0;
 	padding: 3em;
-	border: 1px solid black;
 	opacity: 0;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
@@ -160,7 +232,8 @@ figure.effect-ruby:hover h2 {
 }
 
 figure.effect-ruby:hover p {
-	opacity: 1;
+	background: seagreen;
+	opacity: .6;
 	-webkit-transform: translate3d(0,0,0) scale(1);
 	transform: translate3d(0,0,0) scale(1);
 }
@@ -183,11 +256,11 @@ figure.effect-ruby:hover p {
 	float: left;
 	overflow: hidden;
 	margin: 10px 1%;
-	min-width: 320px;
+	min-width: 336px;
 	max-width: 480px;
-	max-height: 360px;
+	max-height: 250px;
 	width: 48%;
-	background: #3085a3;
+	background: #171919;
 	text-align: center;
 	cursor: pointer;
 	margin-left: 7em;
@@ -196,14 +269,16 @@ figure.effect-ruby:hover p {
 .pic figure img {
 	position: relative;
 	display: block;
-	min-height: 100%;
-	max-width: 100%;
+	width: 24em;
+	height: 20em;
+/*	min-height: 100%;*/
+/*	max-width: 100%;*/
 	opacity: 0.8;
 }
 
 .pic figure figcaption {
 	padding: 2em;
-	color: #fff;
+	color: #8A6D3B;
 	text-transform: uppercase;
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
@@ -249,6 +324,8 @@ figure.effect-ruby:hover p {
 }
 
 .pic figure p {
+	color:white;
+	font-weight: bold;
 	letter-spacing: 1px;
-	font-size: 68.5%;
+	font-size: 80.5%;
 }

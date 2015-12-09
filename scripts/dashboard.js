@@ -15,7 +15,7 @@ $(function() {
 	        "tick_thickness": 5,
 	        "num_sub_ticks": 4,
 	        "total_degrees": 180,
-	        "tick_color": "#555962",
+	        "tick_color": "#554cac",
 	        "tick_on_color": "#527d98",
 	        "tick_on_glow": 20,
 	        "bg_image": null,
@@ -30,17 +30,21 @@ $(function() {
 
 	function updateGauge(number){
 		var color;
+		var colorText;
 		var percentage = parseInt(number * 11.1);
 
-		if(number <= 3){
-			color = 'green';
-		} else if (number <= 6){
-			color = 'yellow';
+		if(number <= 4){
+			color = '#39c8ce';
+			colorText = 'green';
+		} else if (number <= 7){
+			color = '#dbbb1f';
+			colorText = 'yellow';
 		} else {
-			color = 'red';
+			color = '#fd526a';
+			colorText = 'red';
 		}
 
-		$('#color-indicator').css('color', color).text(color);
+		$('#color-indicator').css('color', color).text(colorText);
 
 		gauge.tick_on_color = color;
 		gauge.updatePercent(percentage);
@@ -69,7 +73,7 @@ $(function() {
 	d3.json('../data/new_workouts_two.json', loadDataRenderCharts);
 
 
-		// logs relapse data when modal is closed
+	// logs relapse data when modal is closed
 	$('#relapse-modal').on('hidden.bs.modal', function(){
 		console.log(buildRelapseObject());
 		relapseData.push(buildRelapseObject());
@@ -230,14 +234,20 @@ $(function() {
 
 	$('#fitness-challenge-btn').on('click', function(){
 		var total = 0;
+		var avg = (Math.random() * 20 + 60).toFixed(2);
+		console.log(avg);
 		$('input:checked').each(function(){
 			total += Number($(this).val());
 		})
-		console.log(total);
+		$('.fitness-challenge-score').html(total * 2);
+		$('.fitness-challenge-score-avg').html(avg);
+
 	})
 
 	// $('#fitness-challenge-modal').modal('show');
 
-
+	$('#interface p').each(function(index){
+		$(this).hide().delay(900 * index).fadeIn(1000);
+	})
 
 });
